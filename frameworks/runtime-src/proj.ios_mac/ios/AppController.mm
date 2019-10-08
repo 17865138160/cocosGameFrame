@@ -28,6 +28,73 @@
 #import "cocos2d.h"
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#include "cocos/L/LUtils.h"
+#include "cocos/L/FileManager.h"
+
+#define UNZIP_CONFIG    "unzipconfig.json"
+#define BOOT_PACK       "boot.pack"
+#define APPRES_VERSION  "resversion.json"
+
+/*
+ 读取解压版本
+ */
+NSMutableDictionary *readUnzipConfig(){
+    L::FileManager *fileUtils = L::FileManager::getInstance();
+    cocos2d::Data fdata= fileUtils->getDataFromFile(fileUtils->getWritablePath() + UNZIP_CONFIG);
+    if (!fdata.isNull()) {
+        NSData *odata = [NSData dataWithBytes:fdata.getBytes() length:fdata.getSize()];
+        return [NSJSONSerialization JSONObjectWithData:odata options:NSJSONReadingMutableContainers error:nil];
+    }
+    
+    return [NSMutableDictionary dictionary];
+}
+
+/*
+ 写入解压版本
+ */
+void writeUnzipConfig(NSMutableDictionary *json){
+    if (json != nil) {
+        NSData *odata = [NSJSONSerialization dataWithJSONObject:json options:NSJSONWritingPrettyPrinted error:nil];
+        cocos2d::Data fdata;
+        fdata.fastSet((unsigned char *)[odata bytes],[odata length]);
+        L::FileManager *fileUtils = L::FileManager::getInstance();
+        fileUtils->writeDataToFile(fdata, fileUtils->getWritablePath() + UNZIP_CONFIG);
+    }
+}
+
+/*
+ 读取APK资源版本
+ */
+NSDictionary* readAppResVersion(){
+    L::FileManager *fileUtils = L::FileManager::getInstance();
+    cocos2d::Data fdata= fileUtils->getDataFromFile(std::string("~/") + APPRES_VERSION);
+    if (!fdata.isNull()) {
+        NSData *odata = [NSData dataWithBytes:fdata.getBytes() length:fdata.getSize()];
+        return [NSJSONSerialization JSONObjectWithData:odata options:NSJSONReadingMutableContainers error:nil];
+    }
+    
+    return [NSDictionary dictionary];
+}
+
+/*
+ 解压boot.pack
+ */
+void unzipBootPack(){
+    L::FileManager *fileUtils = L::FileManager::getInstance();
+    std::string bootsrc =std::string("~/") + BOOT_PACK;
+    std::string bootdest = fileUtils->getWritablePath() + BOOT_PACK;
+    
+    NSDictionary * appresver = readAppResVersion();
+    if (fileUtils->isFileExist(bootdest)) {
+        int bootver = fileUtils->lookPackVersion(bootdest);
+        int resbootver = [[appresver objectForKey:@"boot"] intValue];
+        if (resbootver <= bootver) {
+            return;
+        }
+    }
+    
+    L::copyFile(bootsrc, bootdest);
+}
 
 @implementation AppController
 
@@ -76,6 +143,17 @@ static AppDelegate s_sharedApplication;
     // IMPORTANT: Setting the GLView should be done after creating the RootViewController
     cocos2d::GLView *glview = cocos2d::GLViewImpl::createWithEAGLView((__bridge void *)_viewController.view);
     cocos2d::Director::getInstance()->setOpenGLView(glview);
+    
+    // 复制boot包
+    NSMutableDictionary *unzipconf = readUnzipConfig();
+    std::string version = app->getVersionCode();
+    NSString *confvers = [unzipconf objectForKey:@"bootvers"];
+    if (confvers == nullptr || ![confvers isEqualToString:[NSString stringWithUTF8String:version.c_str()]]) {
+        NSLog(@"unzip boot.pack");
+        unzipBootPack();
+        [unzipconf setValue:[NSString stringWithUTF8String:version.c_str()] forKey:@"bootvers"];
+        writeUnzipConfig(unzipconf);
+    }
     
     //run the cocos2d-x game scene
     app->run();

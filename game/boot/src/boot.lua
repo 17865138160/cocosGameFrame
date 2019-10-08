@@ -32,12 +32,18 @@ elseif device.IS_ANDROID then
 	LOCALCONFIG = "~/assets/localconfig.json"
 	PACKSPATH = fileMgr:getWritablePath() .. "packs/"
 	BOOTPACK = fileMgr:getWritablePath() .. "boot.pack"
-	UNZIPCONF = fileMgr:getWritablePath() .. "unzipconfig.json"	-- 安卓解压配置
-	APKRESVERS = "~/assets/resversion.json"							-- APK资源版本
+	UNZIPCONF = fileMgr:getWritablePath() .. "unzipconfig.json"	-- 解压配置
+	RESVERSION = "~/assets/resversion.json"							-- 资源版本
 elseif device.IS_MAC then
 	LOCALCONFIG = "~/localconfig.json"							-- 本地配置
 	PACKSPATH = "~/"											-- 包目录
 	BOOTPACK = "~/boot.pack"									-- boot包路径
+elseif device.IS_IOS then
+	LOCALCONFIG = "~/localconfig.json"
+	PACKSPATH = fileMgr:getWritablePath() .. "packs/"
+	BOOTPACK = fileMgr:getWritablePath() .. "boot.pack"
+	UNZIPCONF = fileMgr:getWritablePath() .. "unzipconfig.json"	-- 解压配置
+	RESVERSION = "~/resversion.json"							-- 资源版本
 end
 
 logMgr:info(C_LOGTAG, "local config file : %s", LOCALCONFIG)
@@ -46,8 +52,8 @@ logMgr:info(C_LOGTAG, "boot pack file : %s", BOOTPACK)
 if UNZIPCONF then
 	logMgr:info(C_LOGTAG, "unzip config file : %s", UNZIPCONF)
 end
-if APKRESVERS then
-	logMgr:info(C_LOGTAG, "apk resource version : %s", APKRESVERS)
+if RESVERSION then
+	logMgr:info(C_LOGTAG, "apk resource version : %s", RESVERSION)
 end
 
 ------------------------------UpdateScene--------------------------------
@@ -111,7 +117,7 @@ function UpdateScene:beginUpdate()
 	self:setUpdateText(self:getText("UPDATING"))
 	self.gb_update:setPercent(0)
 
-	-- 解压安卓资源包,如果未解包过或者安装新APK
+	-- 解压资源包,如果未解包过或者升级游戏
 	if device.IS_ANDROID then
 		local unzipconf = {}
 		if fileMgr:isFileExist(UNZIPCONF) then 
@@ -123,8 +129,8 @@ function UpdateScene:beginUpdate()
 		if unzipconf.packvers ~= version then
 			self:setUpdateText(self:getText("UNZIP_ASSETS"))
 			local apkresconf = {}
-			if fileMgr:isFileExist(APKRESVERS) then 
-				apkresconf = cjson.decode(fileMgr:getDataFromFile(APKRESVERS))
+			if fileMgr:isFileExist(RESVERSION) then 
+				apkresconf = cjson.decode(fileMgr:getDataFromFile(RESVERSION))
 			end
 			for pname, apkpver in pairs(apkresconf) do
 				if pname ~= "boot" then
@@ -135,6 +141,37 @@ function UpdateScene:beginUpdate()
 							logMgr:info(C_LOGTAG, "unzip %s -> %s", unzipfile, destfile)
 						else
 							error("android resources unzip failure : " .. unzipfile)
+						end
+					end
+				end
+			end
+			unzipconf.packvers = version
+			fileMgr:writeStringToFile(cjson.encode(unzipconf),UNZIPCONF)
+			self:setUpdateText(self:getText("UNZIP_ASSETS_END"))
+		end
+	elseif device.IS_IOS then
+		local unzipconf = {}
+		if fileMgr:isFileExist(UNZIPCONF) then 
+			unzipconf = cjson.decode(fileMgr:getDataFromFile(UNZIPCONF))
+		end
+		local version = app:getVersionCode()
+		logMgr:info(C_LOGTAG, "android resources version : %s", unzipconf.packvers or "[unknown]")
+		logMgr:info(C_LOGTAG, "android application version : %s", version or "[unknown]")
+		if unzipconf.packvers ~= version then
+			self:setUpdateText(self:getText("UNZIP_ASSETS"))
+			local apkresconf = {}
+			if fileMgr:isFileExist(RESVERSION) then 
+				apkresconf = cjson.decode(fileMgr:getDataFromFile(RESVERSION))
+			end
+			for pname, apkpver in pairs(apkresconf) do
+				if pname ~= "boot" then
+					if fileMgr:lookPackVersion(PACKSPATH .. pname .. ".pack") < apkpver then
+						local unzipfile = "~/" .. pname .. ".pack"
+						local destfile = PACKSPATH .. pname .. ".pack"
+						if utils.copyFile(unzipfile, destfile) then
+							logMgr:info(C_LOGTAG, "copy file %s -> %s", unzipfile, destfile)
+						else
+							error("ios resources copy failure : " .. unzipfile)
 						end
 					end
 				end

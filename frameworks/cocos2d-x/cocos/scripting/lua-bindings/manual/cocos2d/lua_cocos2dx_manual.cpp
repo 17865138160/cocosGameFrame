@@ -7486,6 +7486,50 @@ int lua_cocos2dx_Application_getVersionCode(lua_State* tolua_S) {
 
 				return 0;
 }
+#elif CC_TARGET_PLATFORM == CC_PLATFORM_IOS
+int lua_cocos2dx_Application_getVersionCode(lua_State* tolua_S) {
+    int argc = 0;
+    cocos2d::Application* cobj = nullptr;
+    bool ok = true;
+    
+#if COCOS2D_DEBUG >= 1
+    tolua_Error tolua_err;
+#endif
+    
+    
+#if COCOS2D_DEBUG >= 1
+    if (!tolua_isusertype(tolua_S, 1, "cc.Application", 0, &tolua_err)) goto tolua_lerror;
+#endif
+    
+    cobj = (cocos2d::Application*)tolua_tousertype(tolua_S, 1, 0);
+    
+#if COCOS2D_DEBUG >= 1
+    if (!cobj) {
+        tolua_error(tolua_S, "invalid 'cobj' in function 'lua_cocos2dx_Application_getVersionCode'", nullptr);
+        return 0;
+    }
+#endif
+    
+    argc = lua_gettop(tolua_S) - 1;
+    if (argc == 0) {
+        if (!ok) {
+            tolua_error(tolua_S, "invalid arguments in function 'lua_cocos2dx_Application_getVersionCode'", nullptr);
+            return 0;
+        }
+        std::string ret = cobj->getVersionCode();
+        lua_pushlstring(tolua_S, ret.c_str(), ret.size());
+        return 1;
+    }
+    luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "cc.Application:getVersionCode", argc, 0);
+    return 0;
+    
+#if COCOS2D_DEBUG >= 1
+tolua_lerror:
+    tolua_error(tolua_S, "#ferror in function 'lua_cocos2dx_Application_getVersionCode'.", &tolua_err);
+#endif
+    
+    return 0;
+}
 #endif
 
 static void extendApplication(lua_State* tolua_S)
@@ -7496,7 +7540,7 @@ static void extendApplication(lua_State* tolua_S)
     {
         tolua_function(tolua_S, "isIOS64bit", lua_cocos2dx_Application_isIOS64bit);
         tolua_function(tolua_S, "is64BitIOSDevice", lua_cocos2dx_Application_is64BitIOSDevice);
-#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
+#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS
 		tolua_function(tolua_S, "getVersionCode", lua_cocos2dx_Application_getVersionCode);
 #endif
     }

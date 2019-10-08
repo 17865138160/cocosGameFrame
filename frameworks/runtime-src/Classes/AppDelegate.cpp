@@ -115,10 +115,10 @@ bool AppDelegate::applicationDidFinishLaunching()
 #endif
     FileUtils::getInstance()->addSearchPath("res");
 
-#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID 
+#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS
 	FileManager::getInstance()->loadFilePack(FileUtils::getInstance()->getWritablePath() + "boot.pack");
 #else
-	FileManager::getInstance()->loadFilePack("boot.pack");
+	FileManager::getInstance()->loadFilePack("~/boot.pack");
 #endif
 	
 	/*

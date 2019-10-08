@@ -670,7 +670,7 @@ void FileManager::deletePackFile(int pindex) {
 }
 
 bool FileManager::loadFilePack(const std::string& packPath) {
-	std::string filepath = removeNativeFlag(packPath);
+	std::string filepath = removeNativeFlag(fullPathForFilename(packPath));
 	FILE *pfile = fopen(filepath.c_str(),"rb");
 	if (!pfile) {
 		CCLOG("Error:can't open pack %s", filepath.c_str());
@@ -711,7 +711,7 @@ unsigned long FileManager::getPackVersion(const std::string& packName) {
 }
 
 unsigned long FileManager::lookPackVersion(const std::string& packPath) {
-	std::string filepath = removeNativeFlag(packPath);
+	std::string filepath = removeNativeFlag(fullPathForFilename(packPath));
 	FILE *pfile = fopen(filepath.c_str(), "rb");
 	if (!pfile) {
 		CCLOG("Error:can't open pack %s", filepath.c_str());

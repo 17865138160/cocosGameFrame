@@ -347,17 +347,19 @@ bool L::Zlib_uncompress(const char *cmpdata, size_t cmplen, size_t unclen, std::
 	return uncompress((Bytef *)uncdata.c_str(), &slen, (const Bytef *)cmpdata, cmplen) == Z_OK;
 }
 
+static std::string _normalOpenPath(const std::string &path) {
+    return FileUtils::getInstance()->getSuitableFOpen(FileManager::getInstance()->removeNativeFlag(path));
+}
+
 void L::mergeFile(const std::string &indir_, const std::string &outpath_, const std::string &infmt, bool iszlib) {
-	std::string indir = FileManager::getInstance()->removeNativeFlag(indir_);
-	std::string outpath = FileManager::getInstance()->removeNativeFlag(outpath_);
 	size_t filecount = 0;
-	FILE *outfile = fopen(outpath.c_str(), "wb");
+	FILE *outfile = fopen(_normalOpenPath(outpath_).c_str(), "wb");
 	if (outfile) {
 		while (true) {
 			char buff[BUFFSIZE];
 			sprintf(buff, infmt.c_str(), filecount);
-			std::string inpath = indir + "/" + buff;
-			FILE *infile = fopen(inpath.c_str(), "rb");
+			std::string inpath = indir_ + "/" + buff;
+			FILE *infile = fopen(_normalOpenPath(FileManager::getInstance()->fullPathForFilename(inpath)).c_str(), "rb");
 			if (!infile) break;
 			if (iszlib) {
 				zlib_inflate(infile, outfile);
@@ -377,17 +379,13 @@ void L::mergeFile(const std::string &indir_, const std::string &outpath_, const 
 }
 
 bool L::patchH(const std::string &newpath_, const std::string &oldpath_, const std::string &diffpath_, int bufsize) {
-	std::string newpath = FileManager::getInstance()->removeNativeFlag(newpath_);
-	std::string oldpath = FileManager::getInstance()->removeNativeFlag(oldpath_);
-	std::string diffpath = FileManager::getInstance()->removeNativeFlag(diffpath_);
-
 	FILE *newfile = nullptr;
 	FILE *oldfile = nullptr;
 	FILE *difffile = nullptr;
 	do {
-		newfile = fopen(newpath.c_str(), "wb");
-		oldfile = fopen(oldpath.c_str(), "rb");
-		difffile = fopen(diffpath.c_str(), "rb");
+		newfile = fopen(_normalOpenPath(newpath_).c_str(), "wb");
+		oldfile = fopen(_normalOpenPath(FileManager::getInstance()->fullPathForFilename(oldpath_)).c_str(), "rb");
+		difffile = fopen(_normalOpenPath(FileManager::getInstance()->fullPathForFilename(diffpath_)).c_str(), "rb");
 		if (!newfile || !oldfile || !difffile) break;
 
 		hpatch_TStreamOutput	out_new;
@@ -427,12 +425,8 @@ bool L::patchH(const std::string &newpath_, const std::string &oldpath_, const s
 	return false;
 }
 
-static std::string _normalOpenPath(const std::string &path) {
-	return FileUtils::getInstance()->getSuitableFOpen(FileManager::getInstance()->removeNativeFlag(path));
-}
-
 static bool unzipFile(const std::string &zipPath, const std::string &filePath, const std::string &outPath) {
-	unzFile zfile = unzOpen64(_normalOpenPath(zipPath).c_str());
+	unzFile zfile = unzOpen64(_normalOpenPath(FileManager::getInstance()->fullPathForFilename(zipPath)).c_str());
 	if (!zfile) return false;
 
 	if (UNZ_OK != unzLocateFile(zfile, filePath.c_str(), 0)) {
@@ -479,7 +473,7 @@ static bool unzipFile(const std::string &zipPath, const std::string &filePath, c
 }
 
 static bool unzipDirectory(const std::string &zipPath, const std::string &filePath, const std::string &outPath) {
-	unzFile zfile = unzOpen64(_normalOpenPath(zipPath).c_str());
+	unzFile zfile = unzOpen64(_normalOpenPath(FileManager::getInstance()->fullPathForFilename(zipPath)).c_str());
 	if (!zfile) return false;
 
 	if (UNZ_OK == unzGoToFirstFile(zfile)) {
@@ -515,4 +509,42 @@ bool L::unzip(const std::string &zipPath, const std::string &filePath, const std
 	else {
 		return unzipFile(zipPath, filePath, outPath);
 	}
+}
+
+#define COPYBUFFSIZE 1024
+bool L::copyFile(const std::string &srcPath, const std::string &destPath){
+    bool result = false;
+    FILE *srcfile = nullptr;
+    FILE *destfile = nullptr;
+    
+    do{
+        srcfile = fopen(_normalOpenPath(FileManager::getInstance()->fullPathForFilename(srcPath)).c_str(), "rb");
+        if (srcfile == nullptr) break;
+        
+        FileUtils::getInstance()->createDirectory(FileManager::getInstance()->getFileDirectory(destPath));
+        
+        destfile = fopen(_normalOpenPath(destPath).c_str(), "wb");
+        if (destfile == nullptr) break;
+        
+        bool cperr = false;
+        size_t rsize = 0;
+        char buffer[COPYBUFFSIZE];
+        do{
+            rsize = fread(buffer, 1, COPYBUFFSIZE, srcfile);
+            if (fwrite(buffer, 1, rsize, destfile) != rsize) {
+                cperr = true;
+            }
+        }while(!cperr && rsize == COPYBUFFSIZE);
+        if (cperr) break;
+        
+        result = true;
+    }while (0);
+    
+    if (srcfile) {
+        fclose(srcfile);
+    }
+    if (destfile) {
+        fclose(destfile);
+    }
+    return result;
 }

@@ -268,6 +268,13 @@ static int utils_unzip(lua_State *L) {
 	return 1;
 }
 
+static int utils_copyFile(lua_State *L) {
+    const char *srcPath = luaL_checkstring(L, 1);
+    const char *destPath = luaL_checkstring(L, 2);
+    lua_pushboolean(L, L::copyFile(srcPath, destPath));
+    return 1;
+}
+
 /*
 *	解压文件或者文件夹
 */
@@ -311,6 +318,7 @@ static const struct luaL_Reg utils_lib[] = {
 	{ "patchH", utils_patchH },
 	{ "unzip", utils_unzip },
 	{ "isDebug", utils_isDebug },
+    { "copyFile", utils_copyFile },
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
 	{ "getAssetsPath", utils_getAssetsPath },
 #endif

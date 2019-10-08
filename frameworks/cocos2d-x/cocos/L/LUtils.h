@@ -113,6 +113,8 @@ CC_DLL void mergeFile(const std::string &indir, const std::string &outfile, cons
 CC_DLL bool patchH(const std::string &newfile, const std::string &oldfile, const std::string &difffile,int bufsize = 10240);
 
 CC_DLL bool unzip(const std::string &zipPath, const std::string &filePath, const std::string &outPath);
+    
+CC_DLL bool copyFile(const std::string &srcPath, const std::string &destPath);
 
 }
 

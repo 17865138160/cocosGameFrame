@@ -45,14 +45,14 @@
 		9FFC07361A4A764100AED399 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FFC07341A4A764100AED399 /* MainMenu.xib */; };
 		C07828F818B4D72E00BD2287 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C07828F418B4D72E00BD2287 /* main.m */; };
 		C07828FA18B4D72E00BD2287 /* SimulatorApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = C07828F718B4D72E00BD2287 /* SimulatorApp.mm */; };
+		C93B0441234C2DE300CA3222 /* demo.pack in Resources */ = {isa = PBXBuildFile; fileRef = C93B043F234C2DE300CA3222 /* demo.pack */; };
+		C93B0442234C2DE300CA3222 /* demo.pack in Resources */ = {isa = PBXBuildFile; fileRef = C93B043F234C2DE300CA3222 /* demo.pack */; };
+		C93B0443234C2DE300CA3222 /* main.pack in Resources */ = {isa = PBXBuildFile; fileRef = C93B0440234C2DE300CA3222 /* main.pack */; };
+		C93B0444234C2DE300CA3222 /* main.pack in Resources */ = {isa = PBXBuildFile; fileRef = C93B0440234C2DE300CA3222 /* main.pack */; };
 		C9448D612340A4710072DE7E /* localconfig.json in Resources */ = {isa = PBXBuildFile; fileRef = C9448D602340A4710072DE7E /* localconfig.json */; };
 		C9448D622340A4710072DE7E /* localconfig.json in Resources */ = {isa = PBXBuildFile; fileRef = C9448D602340A4710072DE7E /* localconfig.json */; };
 		C9448D8F2341CF9A0072DE7E /* boot.pack in Resources */ = {isa = PBXBuildFile; fileRef = C9448D8E2341CF9A0072DE7E /* boot.pack */; };
 		C9448D902341CF9A0072DE7E /* boot.pack in Resources */ = {isa = PBXBuildFile; fileRef = C9448D8E2341CF9A0072DE7E /* boot.pack */; };
-		C9448D932341CFB20072DE7E /* main.pack in Resources */ = {isa = PBXBuildFile; fileRef = C9448D912341CFB20072DE7E /* main.pack */; };
-		C9448D942341CFB20072DE7E /* main.pack in Resources */ = {isa = PBXBuildFile; fileRef = C9448D912341CFB20072DE7E /* main.pack */; };
-		C9448D952341CFB20072DE7E /* demo.pack in Resources */ = {isa = PBXBuildFile; fileRef = C9448D922341CFB20072DE7E /* demo.pack */; };
-		C9448D962341CFB20072DE7E /* demo.pack in Resources */ = {isa = PBXBuildFile; fileRef = C9448D922341CFB20072DE7E /* demo.pack */; };
 		D6B061351803AC000077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B061341803AC000077942B /* CoreMotion.framework */; };
 		DA9E7D881AB1ABCC004B27C8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9E7D871AB1ABCC004B27C8 /* Security.framework */; };
 		ED545A891B68A23E00C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A881B68A23E00C3958E /* libiconv.dylib */; };
@@ -206,10 +206,10 @@
 		C07828F418B4D72E00BD2287 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C07828F618B4D72E00BD2287 /* SimulatorApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulatorApp.h; sourceTree = "<group>"; };
 		C07828F718B4D72E00BD2287 /* SimulatorApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SimulatorApp.mm; sourceTree = "<group>"; };
+		C93B043F234C2DE300CA3222 /* demo.pack */ = {isa = PBXFileReference; lastKnownFileType = file; name = demo.pack; path = ../../../packs/publish/demo.pack; sourceTree = "<group>"; };
+		C93B0440234C2DE300CA3222 /* main.pack */ = {isa = PBXFileReference; lastKnownFileType = file; name = main.pack; path = ../../../packs/publish/main.pack; sourceTree = "<group>"; };
 		C9448D602340A4710072DE7E /* localconfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = localconfig.json; path = ../../../runtime/data/localconfig.json; sourceTree = "<group>"; };
 		C9448D8E2341CF9A0072DE7E /* boot.pack */ = {isa = PBXFileReference; lastKnownFileType = file; name = boot.pack; path = ../../../packs/installed/completes/boot.pack; sourceTree = "<group>"; };
-		C9448D912341CFB20072DE7E /* main.pack */ = {isa = PBXFileReference; lastKnownFileType = file; path = main.pack; sourceTree = "<group>"; };
-		C9448D922341CFB20072DE7E /* demo.pack */ = {isa = PBXFileReference; lastKnownFileType = file; path = demo.pack; sourceTree = "<group>"; };
 		D6B061341803AC000077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		DA9E7D871AB1ABCC004B27C8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		ED545A881B68A23E00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
@@ -223,7 +223,7 @@
 		F293B3D615EB7BE500256477 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F293B3D815EB7BE500256477 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F293B3DA15EB7BE500256477 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F293BB7E15EB831F00256477 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = ../Classes/AppDelegate.cpp; sourceTree = "<group>"; };
+		F293BB7E15EB831F00256477 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = ../Classes/AppDelegate.cpp; sourceTree = "<group>"; usesTabs = 0; };
 		F293BB7F15EB831F00256477 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../Classes/AppDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -291,10 +291,10 @@
 		1A8A4ED51F6F9AD00044495E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C93B043F234C2DE300CA3222 /* demo.pack */,
+				C93B0440234C2DE300CA3222 /* main.pack */,
 				777EFD7E234265B7003724EA /* resversion.json */,
 				C9448D8E2341CF9A0072DE7E /* boot.pack */,
-				C9448D922341CFB20072DE7E /* demo.pack */,
-				C9448D912341CFB20072DE7E /* main.pack */,
 				C9448D602340A4710072DE7E /* localconfig.json */,
 			);
 			name = Resources;
@@ -569,12 +569,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FF504841A5E87B100AFDA55 /* ConsoleWindow.xib in Resources */,
+				C93B0442234C2DE300CA3222 /* demo.pack in Resources */,
 				C9448D902341CF9A0072DE7E /* boot.pack in Resources */,
+				C93B0444234C2DE300CA3222 /* main.pack in Resources */,
 				C9448D622340A4710072DE7E /* localconfig.json in Resources */,
-				C9448D962341CFB20072DE7E /* demo.pack in Resources */,
 				5023817617EBBE3400990C9B /* Icon.icns in Resources */,
 				9FFC07361A4A764100AED399 /* MainMenu.xib in Resources */,
-				C9448D942341CFB20072DE7E /* main.pack in Resources */,
 				777EFD82234265B7003724EA /* resversion.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -584,12 +584,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AF87BAB1F6F8733007BE51C /* LaunchScreenBackground.png in Resources */,
+				C93B0441234C2DE300CA3222 /* demo.pack in Resources */,
 				C9448D8F2341CF9A0072DE7E /* boot.pack in Resources */,
+				C93B0443234C2DE300CA3222 /* main.pack in Resources */,
 				C9448D612340A4710072DE7E /* localconfig.json in Resources */,
-				C9448D952341CFB20072DE7E /* demo.pack in Resources */,
 				1AF87BAA1F6F8733007BE51C /* LaunchScreen.storyboard in Resources */,
 				1ACE45A31FC3F2D000F87E53 /* Images.xcassets in Resources */,
-				C9448D932341CFB20072DE7E /* main.pack in Resources */,
 				777EFD81234265B7003724EA /* resversion.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -691,6 +691,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = ../../../runtime/mac;
@@ -728,6 +729,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -804,7 +806,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../cocos2d-x $(SRCROOT)/../../cocos2d-x/cocos/audio/include $(SRCROOT)/../../cocos2d-x/cocos $(SRCROOT)/../../cocos2d-x/extensions $(SRCROOT)/../../cocos2d-x/external $(SRCROOT)/../../cocos2d-x/external/chipmunk/include/chipmunk $(SRCROOT)/../../cocos2d-x/external/lua/luajit/include $(SRCROOT)/../../cocos2d-x/external/lua/tolua $(SRCROOT)/../../cocos2d-x/tools/simulator/libsimulator/lib $(SRCROOT)/../../cocos2d-x/tools/simulator/libsimulator/lib/protobuf-lite $(SRCROOT)/../../cocos2d-x/cocos/editor-support";
@@ -850,7 +852,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../cocos2d-x $(SRCROOT)/../../cocos2d-x/cocos/audio/include $(SRCROOT)/../../cocos2d-x/cocos $(SRCROOT)/../../cocos2d-x/extensions $(SRCROOT)/../../cocos2d-x/external $(SRCROOT)/../../cocos2d-x/external/chipmunk/include/chipmunk $(SRCROOT)/../../cocos2d-x/external/lua/luajit/include $(SRCROOT)/../../cocos2d-x/external/lua/tolua $(SRCROOT)/../../cocos2d-x/tools/simulator/libsimulator/lib $(SRCROOT)/../../cocos2d-x/tools/simulator/libsimulator/lib/protobuf-lite $(SRCROOT)/../../cocos2d-x/cocos/editor-support";
@@ -863,6 +865,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
@@ -905,6 +908,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
