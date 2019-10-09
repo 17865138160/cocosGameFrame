@@ -36,7 +36,7 @@ elseif device.IS_ANDROID then
 	RESVERSION = "~/assets/resversion.json"							-- 资源版本
 elseif device.IS_MAC then
 	LOCALCONFIG = "~/localconfig.json"							-- 本地配置
-	PACKSPATH = "~/"											-- 包目录
+	PACKSPATH = "~/packs/"											-- 包目录
 	BOOTPACK = "~/boot.pack"									-- boot包路径
 elseif device.IS_IOS then
 	LOCALCONFIG = "~/localconfig.json"
@@ -166,7 +166,7 @@ function UpdateScene:beginUpdate()
 			for pname, apkpver in pairs(apkresconf) do
 				if pname ~= "boot" then
 					if fileMgr:lookPackVersion(PACKSPATH .. pname .. ".pack") < apkpver then
-						local unzipfile = "~/" .. pname .. ".pack"
+						local unzipfile = "~/packs/" .. pname .. ".pack"
 						local destfile = PACKSPATH .. pname .. ".pack"
 						if utils.copyFile(unzipfile, destfile) then
 							logMgr:info(C_LOGTAG, "copy file %s -> %s", unzipfile, destfile)
