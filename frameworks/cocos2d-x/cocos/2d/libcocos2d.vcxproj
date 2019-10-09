@@ -596,7 +596,7 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\uv\prebuilt\win32\*.*" "$(OutDir)"</Com
     <ClCompile Include="..\L\FileManager.cpp" />
     <ClCompile Include="..\L\BufferReader.cpp" />
     <ClCompile Include="..\L\FileReader.cpp" />
-    <ClCompile Include="..\L\HPatch\patch.c" />
+    <ClCompile Include="..\L\HPatch\patch.cpp" />
     <ClCompile Include="..\L\LUtils.cpp" />
     <ClCompile Include="..\L\TMXLayer.cpp" />
     <ClCompile Include="..\L\TMXObject.cpp" />
