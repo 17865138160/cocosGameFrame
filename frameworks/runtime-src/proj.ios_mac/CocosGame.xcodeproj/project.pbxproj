@@ -45,10 +45,8 @@
 		9FFC07361A4A764100AED399 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FFC07341A4A764100AED399 /* MainMenu.xib */; };
 		C07828F818B4D72E00BD2287 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C07828F418B4D72E00BD2287 /* main.m */; };
 		C07828FA18B4D72E00BD2287 /* SimulatorApp.mm in Sources */ = {isa = PBXBuildFile; fileRef = C07828F718B4D72E00BD2287 /* SimulatorApp.mm */; };
-		C93B0441234C2DE300CA3222 /* demo.pack in Resources */ = {isa = PBXBuildFile; fileRef = C93B043F234C2DE300CA3222 /* demo.pack */; };
-		C93B0442234C2DE300CA3222 /* demo.pack in Resources */ = {isa = PBXBuildFile; fileRef = C93B043F234C2DE300CA3222 /* demo.pack */; };
-		C93B0443234C2DE300CA3222 /* main.pack in Resources */ = {isa = PBXBuildFile; fileRef = C93B0440234C2DE300CA3222 /* main.pack */; };
-		C93B0444234C2DE300CA3222 /* main.pack in Resources */ = {isa = PBXBuildFile; fileRef = C93B0440234C2DE300CA3222 /* main.pack */; };
+		C900AA41234DB0EC00596D11 /* packs in Resources */ = {isa = PBXBuildFile; fileRef = C900AA40234DB0EC00596D11 /* packs */; };
+		C900AA42234DB0EC00596D11 /* packs in Resources */ = {isa = PBXBuildFile; fileRef = C900AA40234DB0EC00596D11 /* packs */; };
 		C9448D612340A4710072DE7E /* localconfig.json in Resources */ = {isa = PBXBuildFile; fileRef = C9448D602340A4710072DE7E /* localconfig.json */; };
 		C9448D622340A4710072DE7E /* localconfig.json in Resources */ = {isa = PBXBuildFile; fileRef = C9448D602340A4710072DE7E /* localconfig.json */; };
 		C9448D8F2341CF9A0072DE7E /* boot.pack in Resources */ = {isa = PBXBuildFile; fileRef = C9448D8E2341CF9A0072DE7E /* boot.pack */; };
@@ -206,8 +204,7 @@
 		C07828F418B4D72E00BD2287 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C07828F618B4D72E00BD2287 /* SimulatorApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimulatorApp.h; sourceTree = "<group>"; };
 		C07828F718B4D72E00BD2287 /* SimulatorApp.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SimulatorApp.mm; sourceTree = "<group>"; };
-		C93B043F234C2DE300CA3222 /* demo.pack */ = {isa = PBXFileReference; lastKnownFileType = file; name = demo.pack; path = ../../../packs/publish/demo.pack; sourceTree = "<group>"; };
-		C93B0440234C2DE300CA3222 /* main.pack */ = {isa = PBXFileReference; lastKnownFileType = file; name = main.pack; path = ../../../packs/publish/main.pack; sourceTree = "<group>"; };
+		C900AA40234DB0EC00596D11 /* packs */ = {isa = PBXFileReference; lastKnownFileType = folder; name = packs; path = ../../../runtime/data/packs; sourceTree = "<group>"; };
 		C9448D602340A4710072DE7E /* localconfig.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = localconfig.json; path = ../../../runtime/data/localconfig.json; sourceTree = "<group>"; };
 		C9448D8E2341CF9A0072DE7E /* boot.pack */ = {isa = PBXFileReference; lastKnownFileType = file; name = boot.pack; path = ../../../packs/installed/completes/boot.pack; sourceTree = "<group>"; };
 		D6B061341803AC000077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
@@ -291,8 +288,7 @@
 		1A8A4ED51F6F9AD00044495E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C93B043F234C2DE300CA3222 /* demo.pack */,
-				C93B0440234C2DE300CA3222 /* main.pack */,
+				C900AA40234DB0EC00596D11 /* packs */,
 				777EFD7E234265B7003724EA /* resversion.json */,
 				C9448D8E2341CF9A0072DE7E /* boot.pack */,
 				C9448D602340A4710072DE7E /* localconfig.json */,
@@ -569,9 +565,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FF504841A5E87B100AFDA55 /* ConsoleWindow.xib in Resources */,
-				C93B0442234C2DE300CA3222 /* demo.pack in Resources */,
+				C900AA42234DB0EC00596D11 /* packs in Resources */,
 				C9448D902341CF9A0072DE7E /* boot.pack in Resources */,
-				C93B0444234C2DE300CA3222 /* main.pack in Resources */,
 				C9448D622340A4710072DE7E /* localconfig.json in Resources */,
 				5023817617EBBE3400990C9B /* Icon.icns in Resources */,
 				9FFC07361A4A764100AED399 /* MainMenu.xib in Resources */,
@@ -584,9 +579,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AF87BAB1F6F8733007BE51C /* LaunchScreenBackground.png in Resources */,
-				C93B0441234C2DE300CA3222 /* demo.pack in Resources */,
+				C900AA41234DB0EC00596D11 /* packs in Resources */,
 				C9448D8F2341CF9A0072DE7E /* boot.pack in Resources */,
-				C93B0443234C2DE300CA3222 /* main.pack in Resources */,
 				C9448D612340A4710072DE7E /* localconfig.json in Resources */,
 				1AF87BAA1F6F8733007BE51C /* LaunchScreen.storyboard in Resources */,
 				1ACE45A31FC3F2D000F87E53 /* Images.xcassets in Resources */,

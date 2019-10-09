@@ -56,7 +56,7 @@ function LogManager:ctor()
 	self._flushlevel = C_LEVEL.ERROR								-- 日志刷新缓冲等级
 	self._buffsize = C_BUFFERSIZE									-- 日志缓冲大小
 	self._logformat = handler(self,LogManager._defaultLogFormat)	-- 日志格式函数
-	self._logpath = fileMgr:getWritablePath() .. "/" .. DIRECTORY.LOG .. "/"
+	self._logpath = fileMgr:getWritablePath() .. DIRECTORY.LOG .. "/"
 	self._logfile = self._logpath .. "/" .. os.date("%Y%m%d%H%M%S") .. ".log"
 	self._logbuffer = { logs = {}, size = 0, }						-- 日志缓冲
 	
