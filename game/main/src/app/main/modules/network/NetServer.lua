@@ -18,7 +18,7 @@ end
 
 -- 构造函数
 function NetServer:ctor()
-	self:initHandler()
+	self:_initHandler()
 	self._servers = {}			-- 服务端表
 	self._netlines = {}			-- 网络线
 end
@@ -77,7 +77,7 @@ end
 	添加网络线
 	netline		网络线对象
 ]]
-function NetServer:addNetLine(netline)
+function NetServer:_addNetLine(netline)
 	netline:open()
 	self._netlines[netline:getName()] = netline
 end
@@ -94,7 +94,7 @@ end
 	移除网络线
 	name		网络线名称
 ]]
-function NetServer:removeNetLine(name)
+function NetServer:_removeNetLine(name)
 	local netline = self._netlines[name]
 	if netline then
 		netline:close()
@@ -106,11 +106,11 @@ end
 	移除移动服务器线上的所有网络线
 	serline		服务端线
 ]]
-function NetServer:removeNetLines(serline)
+function NetServer:_removeNetLines(serline)
 	for name,_ in pairs(table.keys(self._netlines)) do
 		local netline = self._netlines[name]
 		if netline:getServerLine() == serline then
-			self:removeNetLine(name)
+			self:_removeNetLine(name)
 		end
 	end
 end

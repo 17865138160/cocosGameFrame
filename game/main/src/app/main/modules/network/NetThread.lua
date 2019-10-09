@@ -424,7 +424,7 @@ function NetThread:start(config)
 		self._csend		= effil.channel(C_CHANNEL_SIZE)
 		self._crecv		= effil.channel(C_CHANNEL_SIZE)
 		self._thread = effil.thread(_NetThread)(self._shared, self._csend, self._crecv)
-		self._timer = scheduler:scheduleScriptFunc(handler(self, NetThread.update), 0, false)
+		self._timer = scheduler:scheduleScriptFunc(handler(self, NetThread._update), 0, false)
 	end
 end
 
@@ -464,7 +464,7 @@ end
 --[[
 	更新提取网络数据
 ]]
-function NetThread:update()
+function NetThread:_update()
 	if self._crecv then
 		local recvcount = 0
 		local recv = { self._crecv:pop(0,"s") }
@@ -478,7 +478,7 @@ function NetThread:update()
 					self._callbacks[recv[2]] = nil
 				end
 			elseif recv[1] == "LOG" then
-				logMgr:writeContent(select(2, unpack(recv)))
+				logMgr:_writeContent(select(2, unpack(recv)))
 			elseif recv[1] == "ERROR" then
 				logMgr:error(C_LOGTAG, 
 					"\n------------------------------NET ERROR------------------------------\n" .. 
@@ -498,7 +498,7 @@ end
 	port			连接端口
 	config			客户端配置
 ]]
-function NetThread:openServer(callback, address, port, config)
+function NetThread:_openServer(callback, address, port, config)
 	if self._csend then
 		self._netids = self._netids + 1
 		self._callbacks[self._netids] = callback
@@ -513,7 +513,7 @@ end
 	port			连接端口
 	config			客户端配置
 ]]
-function NetThread:openClient(callback, address, port, config)
+function NetThread:_openClient(callback, address, port, config)
 	if self._csend then
 		self._netids = self._netids + 1
 		self._callbacks[self._netids] = callback
@@ -525,7 +525,7 @@ end
 	打开网络
 	netid		网络ID
 ]]
-function NetThread:openNet(netid, callback)
+function NetThread:_openNet(netid, callback)
 	if self._csend and netid then
 		self._callbacks[netid] = callback
 	end
@@ -535,7 +535,7 @@ end
 	关闭网络
 	netid		网络ID
 ]]
-function NetThread:closeNet(netid)
+function NetThread:_closeNet(netid)
 	if self._csend and netid then
 		self._callbacks[netid] = nil
 		self._csend:push("CLOSE_NET", netid)
@@ -547,7 +547,7 @@ end
 	netid		网络ID
 	data		数据
 ]]
-function NetThread:writeData(netid, data)
+function NetThread:_writeData(netid, data)
 	if self._csend and netid then
 		self._csend:push("WRITE_DATA", netid, data)
 		return true
@@ -559,7 +559,7 @@ end
 	netid		网络ID
 	data		数据
 ]]
-function NetThread:writeTest(netid, data)
+function NetThread:_writeTest(netid, data)
 	if self._csend and netid then
 		self._csend:push("WRITE_TEST", netid, data)
 		return true
@@ -572,7 +572,7 @@ end
 	name		协议名
 	data		协议数据
 ]]
-function NetThread:writeProtocol(netid, name, data)
+function NetThread:_writeProtocol(netid, name, data)
 	if self._csend and netid then
 		self._csend:push("WRITE_PROTOCOL", netid, name, data)
 		return true

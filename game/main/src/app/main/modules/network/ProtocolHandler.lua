@@ -6,7 +6,7 @@ local THIS_MODULE = ...
 local ProtocolHandler = class("ProtocolHandler")
 
 -- 初始化处理器
-function ProtocolHandler:initHandler()
+function ProtocolHandler:_initHandler()
 	self._prothandles = {}		-- 协议处理器
 end
 

@@ -852,14 +852,14 @@ function MapScene:onControlKey(keycode)
 			-- 开发调试
 			if FLAG.DEVELOPMENT then	
 				if ctrlMgr:testPressed(ctrlMgr.KEY_UP) then
-					----[[
+					--[[
 					majorTeam:addExps(1200000)
 					majorTeam:addGolds(100000)
 					majorTeam:recoverSoldiers()
 					majorTeam:recoverSP()
 					--]]
 
-					--[[
+					----[[
 					netServer:addServer("server", "127.0.0.1", 8000, {
 						server = {
 							encrypt = { "aes", "xor" }
@@ -884,7 +884,7 @@ function MapScene:onControlKey(keycode)
 					
 					return ctrlMgr:clearPressed()
 				elseif ctrlMgr:testPressed(ctrlMgr.KEY_DOWN) then
-					----[[
+					--[[
 					majorTeam:upgradeMajorLevel()
 					--]]
 
@@ -895,7 +895,7 @@ function MapScene:onControlKey(keycode)
 						b3Mgr:getB3Tree("test"):tick(nil, self.blackboard)
 					--]]
 
-					--[[
+					----[[
 					netClient:addClient("client", "127.0.0.1", 8000,{
 						client = {
 							encrypt = { "xor","aes", }

@@ -18,7 +18,7 @@ end
 
 -- 构造函数
 function NetClient:ctor()
-	self:initHandler()
+	self:_initHandler()
 	self._clients = {}			-- 客户端表
 end
 

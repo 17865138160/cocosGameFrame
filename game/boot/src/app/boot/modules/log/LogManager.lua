@@ -114,11 +114,11 @@ end
 	fmt			格式字符串
 	... 		日志参数
 ]]
-function LogManager:writeLog(config, fmt, ...)
+function LogManager:_writeLog(config, fmt, ...)
 	if config.level >= self._loglevel then
 		local content = string.format(fmt, ...)
 		local log = self._logformat(config, content)
-		self:writeContent(config.level, log)
+		self:_writeContent(config.level, log)
 	end
 end
 
@@ -126,7 +126,7 @@ end
 	写入日志内容
 	log		日志字符串
 ]]
-function LogManager:writeContent(level, log)
+function LogManager:_writeContent(level, log)
 	print(log)
 	table.insert(self._logbuffer.logs, log)
 	self._logbuffer.size = self._logbuffer.size + #log
@@ -149,7 +149,7 @@ function LogManager:verbose(config, fmt, ...)
 		config = { tag = config }
 	end
 	config.level = C_LEVEL.VERBOSE
-	self:writeLog(config, fmt, ...)
+	self:_writeLog(config, fmt, ...)
 end
 
 -- 输出 DEBUG 日志
@@ -159,7 +159,7 @@ function LogManager:debug(config, fmt, ...)
 			config = { tag = config }
 		end
 		config.level = C_LEVEL.DEBUG
-		self:writeLog(config, fmt, ...)
+		self:_writeLog(config, fmt, ...)
 	end
 end
 
@@ -169,7 +169,7 @@ function LogManager:info(config, fmt, ...)
 		config = { tag = config }
 	end
 	config.level = C_LEVEL.INFO
-	self:writeLog(config, fmt, ...)
+	self:_writeLog(config, fmt, ...)
 end
 
 -- 输出 WARN 日志
@@ -178,7 +178,7 @@ function LogManager:warn(config, fmt, ...)
 		config = { tag = config }
 	end
 	config.level = C_LEVEL.WARN
-	self:writeLog(config, fmt, ...)
+	self:_writeLog(config, fmt, ...)
 end
 
 -- 输出 ERROR 日志
@@ -187,7 +187,7 @@ function LogManager:error(config, fmt, ...)
 		config = { tag = config }
 	end
 	config.level = C_LEVEL.ERROR
-	self:writeLog(config, fmt, ...)
+	self:_writeLog(config, fmt, ...)
 end
 
 return LogManager

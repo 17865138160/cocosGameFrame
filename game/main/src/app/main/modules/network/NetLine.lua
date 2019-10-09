@@ -21,7 +21,7 @@ local NetLine = class("NetLine", require("app.main.modules.network.ProtocolHandl
 	netid				网络ID
 ]]
 function NetLine:ctor(ntype, name, address, port, config, listen, netid)
-	self:initHandler()
+	self:_initHandler()
 	self._ntype = ntype
 	self._name = name
 	self._address = address
@@ -65,7 +65,7 @@ function NetLine:isValid()
 end
 
 -- 客户端回调
-function NetLine:onClientCallback(rtype, ...)
+function NetLine:_onClientCallback(rtype, ...)
 	if rtype == "CONNECTED" then
 		local netid = ...
 		if netid then
@@ -108,7 +108,7 @@ function NetLine:onClientCallback(rtype, ...)
 end
 
 -- 服务器回调
-function NetLine:onServerCallback(rtype, ...)
+function NetLine:_onServerCallback(rtype, ...)
 	if rtype == "LISTENED" then
 		local netid = ...
 		if netid then
@@ -121,7 +121,7 @@ function NetLine:onServerCallback(rtype, ...)
 		local netid, address, port = ...
 		local netline = NetLine:create("N", netid, address, port, nil, nil, netid)
 		netline:setServerLine(self)
-		netServer:addNetLine(netline)
+		netServer:_addNetLine(netline)
 		if self._listen.newConnect then 
 			self._listen.newConnect(netline) 
 		end
@@ -133,7 +133,7 @@ function NetLine:onServerCallback(rtype, ...)
 	elseif rtype == "CLOSED" then
 		if self._netid then
 			self._netid = nil
-			netServer:removeNetLines(self)
+			netServer:_removeNetLines(self)
 			local error = ...
 			if self._listen.onClose then 
 				self._listen.onClose(self, error) 
@@ -143,7 +143,7 @@ function NetLine:onServerCallback(rtype, ...)
 end
 
 -- 网络连接回调
-function NetLine:onNetCallback(rtype, ...)
+function NetLine:_onNetCallback(rtype, ...)
 	if rtype == "RECIVE_PROTOCOL" then
 		local name, data = ...
 		if self._listen.onRecvProt then 
@@ -160,7 +160,7 @@ function NetLine:onNetCallback(rtype, ...)
 	elseif rtype == "CLOSED" then
 		if self._netid then
 			self._netid = nil
-			netServer:removeNetLine(self._name)
+			netServer:_removeNetLine(self._name)
 			local error = ...
 			if self._listen.onClose then 
 				self._listen.onClose(self, error) 
@@ -173,15 +173,15 @@ end
 function NetLine:open()
 	if not self._netid then
 		if self._ntype == "C" then
-			netThread:openClient(handler(self, NetLine.onClientCallback), 
+			netThread:_openClient(handler(self, NetLine._onClientCallback), 
 				self._address, self._port, self._config)
 		elseif self._ntype == "S" then
-			netThread:openServer(handler(self, NetLine.onServerCallback), 
+			netThread:_openServer(handler(self, NetLine._onServerCallback), 
 				self._address, self._port, self._config)
 		end
 	else
 		if self._ntype == "N" then
-			netThread:openNet(self._netid, handler(self, NetLine.onNetCallback))
+			netThread:_openNet(self._netid, handler(self, NetLine._onNetCallback))
 		end
 	end
 end
@@ -191,11 +191,11 @@ function NetLine:close()
 	if self._netid then
 		local netid = self._netid
 		self._netid = nil
-		netThread:closeNet(netid)
+		netThread:_closeNet(netid)
 		if self._ntype == "S" then
-			netServer:removeNetLines(self)
+			netServer:_removeNetLines(self)
 		elseif self._ntype == "N" then
-			netServer:removeNetLine(self._name)
+			netServer:_removeNetLine(self._name)
 		end
 	end
 end
@@ -206,7 +206,7 @@ end
 ]]
 function NetLine:writeData(data)
 	if self._ntype == "C" or self._ntype == "N" and self._netid then
-		return netThread:writeData(self._netid, data)
+		return netThread:_writeData(self._netid, data)
 	end
 end
 
@@ -216,7 +216,7 @@ end
 ]]
 function NetLine:writeTest(data)
 	if self._ntype == "C" or self._ntype == "N" and self._netid then
-		return netThread:writeTest(self._netid, data)
+		return netThread:_writeTest(self._netid, data)
 	end
 end
 
@@ -227,7 +227,7 @@ end
 ]]
 function NetLine:writeProtocol(name, data)
 	if self._ntype == "C" or self._ntype == "N" and self._netid then
-		return netThread:writeProtocol(self._netid, name, data)
+		return netThread:_writeProtocol(self._netid, name, data)
 	end
 end
 

@@ -23,13 +23,13 @@ function ProtocolManager:ctor()
 	self._cmdprots		= {}	-- 协议命令表
 	self._typepackers	= {}	-- 类型打包表
 
-	self:setupTypePackers()
+	self:_setupTypePackers()
 end
 
 --[[
 	安装类型打包器
 ]]
-function ProtocolManager:setupTypePackers()
+function ProtocolManager:_setupTypePackers()
 	self._typepackers["int8"] = {
 		pack = function (writer, data)
 			writer:writeByte(data or 0)
