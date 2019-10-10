@@ -619,7 +619,7 @@ function SocketIO:onShakeClient(iswrite)
 				self:openHeartCheck()
 				self._operates.doCallback(self:getListenIO():getSocket(), 
 					"NEW_CONNECT", self:getNetID(), self._socket:getsockname())
-				logMgr:info(C_LOGTAG, "client shake : \n" .. string.dump(self._data,"config"))
+				logMgr:info(C_LOGTAG, "client shake : \n%s", string.dump(self._data,"config"))
 			else
 				self._operates.removeSocket(self._socket, self._data.error)
 			end
@@ -680,7 +680,7 @@ function SocketIO:onShakeServer(iswrite)
 					self._action = nil			-- 握手完成
 					self:openHeartWrite()
 					self._operates.doCallback(self._socket, "CONNECTED", self:getNetID())
-					logMgr:info(C_LOGTAG, "server shake : \n" .. string.dump(self._data,"config"))
+					logMgr:info(C_LOGTAG, "server shake : \n%s", string.dump(self._data,"config"))
 				else	-- 握手错误
 					self._operates.doCallback(self._socket, "CONNECTFAIL")
 					self._operates.removeSocket(self._socket, self._data.error)

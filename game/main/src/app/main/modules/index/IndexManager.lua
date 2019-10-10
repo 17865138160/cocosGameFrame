@@ -39,7 +39,7 @@ function IndexManager:setEnv(key, value)
 		if ERROR.INDEX_ENV_CONFLICT then
 			error(msg)
 		else
-			logMgr:warn(C_LOGTAG, msg)
+			logMgr:warn(C_LOGTAG, "%s", msg)
 		end
 	end
 	self._envs[fkey] = value
@@ -124,7 +124,7 @@ function IndexManager:mergeTalbe(jdest, jsrc, jpath, listen, jsonpath)
 				if ERROR.INDEX_PATH_CONFLICT then
 					error(msg)
 				else
-					logMgr:warn(C_LOGTAG, msg)
+					logMgr:warn(C_LOGTAG, "%s", msg)
 				end
 			end
 			jdest[name] = value

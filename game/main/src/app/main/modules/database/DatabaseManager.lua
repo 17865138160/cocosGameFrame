@@ -61,7 +61,7 @@ function DatabaseManager:registerTable(tbname, newtable, tbfile)
 			if ERROR.DB_TABLE_KEY_CONFLICT then
 				error(msg)
 			else
-				logMgr:warn(C_LOGTAG, msg)
+				logMgr:warn(C_LOGTAG, "%s", msg)
 			end
 		end
 		dbtable[tbkey] = tbvalue

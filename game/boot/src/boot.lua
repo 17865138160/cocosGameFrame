@@ -109,7 +109,7 @@ end
 function UpdateScene:setUpdateText(text,color)
 	self.lb_update:setTextColor(color or cc.c4b(255,255,255,255))
 	self.lb_update:setString(text)
-	logMgr:info(C_LOGTAG, text)
+	logMgr:info(C_LOGTAG, "%s", text)
 end
 
 -- 开始更新
