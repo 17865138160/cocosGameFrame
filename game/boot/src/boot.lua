@@ -118,12 +118,7 @@ function UpdateScene:beginUpdate()
 	self.gb_update:setPercent(0)
 
 	-- 解压资源包,如果未解包过或者升级游戏
-	if device.IS_WINDOWS then
-		if FLAG.HTTPSVERIFY then
-			app:setSSLVerification(
-				fileMgr:removeNativeFlag(fileMgr:fullPathForFilename("~/cacert.pem")))
-		end
-	elseif device.IS_ANDROID then
+	if device.IS_ANDROID then
 		local unzipconf = {}
 		if fileMgr:isFileExist(UNZIPCONF) then 
 			unzipconf = cjson.decode(fileMgr:getDataFromFile(UNZIPCONF))
@@ -163,12 +158,6 @@ function UpdateScene:beginUpdate()
 			fileMgr:writeStringToFile(cjson.encode(unzipconf),UNZIPCONF)
 			self:setUpdateText(self:getText("UNZIP_ASSETS_END"))
 		end
-		if FLAG.HTTPSVERIFY then
-			app:setSSLVerification(
-				fileMgr:removeNativeFlag(fileMgr:getWritablePath() .. "cacert.pem"))
-		end
-	elseif device.IS_MAC then
-
 	elseif device.IS_IOS then
 		local unzipconf = {}
 		if fileMgr:isFileExist(UNZIPCONF) then 
@@ -201,6 +190,17 @@ function UpdateScene:beginUpdate()
 			unzipconf.packvers = version
 			fileMgr:writeStringToFile(cjson.encode(unzipconf),UNZIPCONF)
 			self:setUpdateText(self:getText("UNZIP_ASSETS_END"))
+		end
+	end
+
+	-- https验证配置
+	if FLAG.HTTPSVERIFY then
+		if device.IS_ANDROID then
+			app:setSSLVerification(
+				fileMgr:removeNativeFlag(fileMgr:getWritablePath() .. "cacert.pem"))
+		elseif device.IS_WINDOWS or device.IS_MAC or device.IS_IOS then
+			app:setSSLVerification(
+				fileMgr:removeNativeFlag(fileMgr:fullPathForFilename("~/cacert.pem")))
 		end
 	end
 	
