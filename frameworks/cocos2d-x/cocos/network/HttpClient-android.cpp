@@ -538,7 +538,7 @@ private:
         if(_client->getSSLVerification().empty())
             return;
 
-        std::string fullpath = FileUtils::getInstance()->fullPathForFilename(_client->getSSLVerification());
+        std::string fullpath = _client->getSSLVerification();
 
         JniMethodInfo methodInfo;
         if (JniHelper::getStaticMethodInfo(methodInfo,
