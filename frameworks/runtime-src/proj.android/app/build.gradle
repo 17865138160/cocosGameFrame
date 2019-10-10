@@ -96,6 +96,7 @@ android.applicationVariants.all { variant ->
 			include "**/boot.pack"
             include "**/localconfig.json"
 			include "**/resversion.json"
+			include "**/cacert.pem"
         }
         copy {
 			from "${buildDir}/../../../../../packs/publish"

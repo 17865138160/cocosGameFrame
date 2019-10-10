@@ -118,7 +118,12 @@ function UpdateScene:beginUpdate()
 	self.gb_update:setPercent(0)
 
 	-- 解压资源包,如果未解包过或者升级游戏
-	if device.IS_ANDROID then
+	if device.IS_WINDOWS then
+		if FLAG.HTTPSVERIFY then
+			app:setSSLVerification(
+				fileMgr:removeNativeFlag(fileMgr:fullPathForFilename("~/cacert.pem")))
+		end
+	elseif device.IS_ANDROID then
 		local unzipconf = {}
 		if fileMgr:isFileExist(UNZIPCONF) then 
 			unzipconf = cjson.decode(fileMgr:getDataFromFile(UNZIPCONF))
@@ -128,6 +133,15 @@ function UpdateScene:beginUpdate()
 		logMgr:info(C_LOGTAG, "android application version : %d", version or 0)
 		if unzipconf.packvers ~= version then
 			self:setUpdateText(self:getText("UNZIP_ASSETS"))
+
+			-- 解压https证书
+			if utils.unzip(utils.getAssetsPath(), "assets/cacert.pem", fileMgr:getWritablePath() .. "cacert.pem") then
+				logMgr:info(C_LOGTAG, "unzip %s -> %s", "assets/cacert.pem", fileMgr:getWritablePath() .. "cacert.pem")
+			else
+				error("android resources unzip failure : " .. "assets/cacert.pem")
+			end
+
+			-- 解压资源包
 			local apkresconf = {}
 			if fileMgr:isFileExist(RESVERSION) then 
 				apkresconf = cjson.decode(fileMgr:getDataFromFile(RESVERSION))
@@ -149,6 +163,12 @@ function UpdateScene:beginUpdate()
 			fileMgr:writeStringToFile(cjson.encode(unzipconf),UNZIPCONF)
 			self:setUpdateText(self:getText("UNZIP_ASSETS_END"))
 		end
+		if FLAG.HTTPSVERIFY then
+			app:setSSLVerification(
+				fileMgr:removeNativeFlag(fileMgr:getWritablePath() .. "cacert.pem"))
+		end
+	elseif device.IS_MAC then
+
 	elseif device.IS_IOS then
 		local unzipconf = {}
 		if fileMgr:isFileExist(UNZIPCONF) then 
@@ -159,6 +179,8 @@ function UpdateScene:beginUpdate()
 		logMgr:info(C_LOGTAG, "android application version : %s", version or "[unknown]")
 		if unzipconf.packvers ~= version then
 			self:setUpdateText(self:getText("UNZIP_ASSETS"))
+
+			-- 复制资源包
 			local apkresconf = {}
 			if fileMgr:isFileExist(RESVERSION) then 
 				apkresconf = cjson.decode(fileMgr:getDataFromFile(RESVERSION))
@@ -182,6 +204,18 @@ function UpdateScene:beginUpdate()
 		end
 	end
 	
+	-- TEST
+	--[[
+	utils.http_get("https://example.com/",function (result,data)
+		if result then
+			logMgr:info(C_LOGTAG, "https test success : %s", data)
+		else
+			logMgr:info(C_LOGTAG, "https test error")
+		end
+		logMgr:flushLog()
+	end)
+	--]]
+
 	self:setUpdateText(self:getText("READ_CONFIG"))
 	self.gb_update:setPercent(10)
 	gameConfig:loadConfig(LOCALCONFIG,function (ctype)

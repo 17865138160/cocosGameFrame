@@ -100,6 +100,7 @@ class WindowsPublisher:
 				
 		# 写入配置文件
 		gamezip.write(CURPATH + "/publish/config/localconfig.json",gamename + "/localconfig.json")
+		gamezip.write(CURPATH + "/publish/config/cacert.pem",gamename + "/cacert.pem")
 		
 		# 写入运行脚本
 		gamezip.writestr(gamename + "/运行游戏.bat", 'start bin/%s.exe -resolution 852x480 -workdir "%%cd%%"' % self.projname)

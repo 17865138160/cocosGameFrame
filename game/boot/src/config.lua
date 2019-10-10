@@ -27,8 +27,9 @@ CC_DESIGN_RESOLUTION = {
 
 -- 标志
 FLAG = {
-	ENABLEREMOTE = true,		-- 远程配置
-	ENABLEUPDATE = true,		-- 使能更新
+	ENABLEREMOTE	= true,		-- 远程配置
+	ENABLEUPDATE 	= true,		-- 使能更新
+	HTTPSVERIFY		= true,		-- https验证
 }
 
 -- 目录
