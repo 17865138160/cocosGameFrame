@@ -63,6 +63,7 @@
 #include "platform/CCFileUtils.h"
 #include "platform/CCGLView.h"
 #include "renderer/CCTextureCache.h"
+#include "cocos/network/HttpClient.h"
 
 static int tolua_cocos2d_MenuItemImage_create(lua_State* tolua_S)
 {
@@ -7532,6 +7533,55 @@ tolua_lerror:
 }
 #endif
 
+int lua_cocos2dx_Application_setSSLVerification(lua_State* tolua_S)
+{
+	int argc = 0;
+	cocos2d::Application* cobj = nullptr;
+	bool ok = true;
+
+#if COCOS2D_DEBUG >= 1
+	tolua_Error tolua_err;
+#endif
+
+#if COCOS2D_DEBUG >= 1
+	if (!tolua_isusertype(tolua_S, 1, "cc.Application", 0, &tolua_err)) goto tolua_lerror;
+#endif
+
+	cobj = (cocos2d::Application*)tolua_tousertype(tolua_S, 1, 0);
+
+#if COCOS2D_DEBUG >= 1
+	if (!cobj)
+	{
+		tolua_error(tolua_S, "invalid 'cobj' in function 'lua_cocos2dx_Application_setSSLVerification'", nullptr);
+		return 0;
+	}
+#endif
+
+	argc = lua_gettop(tolua_S) - 1;
+	if (argc == 1)
+	{
+		std::string arg0;
+		ok &= luaval_to_std_string(tolua_S, 2, &arg0, "cc.Application:setSSLVerification");
+		if (!ok)
+		{
+			tolua_error(tolua_S, "invalid arguments in function 'lua_cocos2dx_Application_setSSLVerification'", nullptr);
+			return 0;
+		}
+		
+		network::HttpClient::getInstance()->setSSLVerification(arg0);
+		return 0;
+	}
+	luaL_error(tolua_S, "%s has wrong number of arguments: %d, was expecting %d \n", "cc.Application:setSSLVerification", argc, 1);
+	return 0;
+
+#if COCOS2D_DEBUG >= 1
+	tolua_lerror:
+				tolua_error(tolua_S, "#ferror in function 'lua_cocos2dx_Application_setSSLVerification'.", &tolua_err);
+#endif
+
+				return 0;
+}
+
 static void extendApplication(lua_State* tolua_S)
 {
     lua_pushstring(tolua_S, "cc.Application");
@@ -7543,6 +7593,7 @@ static void extendApplication(lua_State* tolua_S)
 #if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_IOS
 		tolua_function(tolua_S, "getVersionCode", lua_cocos2dx_Application_getVersionCode);
 #endif
+		tolua_function(tolua_S, "setSSLVerification", lua_cocos2dx_Application_setSSLVerification);
     }
     lua_pop(tolua_S, 1);
 }
