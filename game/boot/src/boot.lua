@@ -195,13 +195,15 @@ function UpdateScene:beginUpdate()
 
 	-- https验证配置
 	if FLAG.HTTPSVERIFY then
+		local cafile = ""
 		if device.IS_ANDROID then
-			app:setSSLVerification(
-				fileMgr:removeNativeFlag(fileMgr:getWritablePath() .. "cacert.pem"))
+			cafile = fileMgr:removeNativeFlag(fileMgr:getWritablePath() .. "cacert.pem")
 		elseif device.IS_WINDOWS or device.IS_MAC or device.IS_IOS then
-			app:setSSLVerification(
-				fileMgr:removeNativeFlag(fileMgr:fullPathForFilename("~/cacert.pem")))
+			cafile = fileMgr:removeNativeFlag(fileMgr:fullPathForFilename("~/cacert.pem"))
 		end
+		app:setHttpsCAFile(cafile)
+
+		logMgr:info(C_LOGTAG, "set https ca file : %s", cafile)
 	end
 	
 	-- TEST
