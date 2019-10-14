@@ -34,10 +34,7 @@
     </Item>
     <Item Key="TabsParamsKey">
       <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="UpdateScene.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="UpdateScene.csd" />
+        <ActiveDocument />
       </Value>
     </Item>
   </Properties>

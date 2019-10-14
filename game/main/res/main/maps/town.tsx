@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset name="town" tilewidth="16" tileheight="16" spacing="2" margin="1" tilecount="208" columns="8">
- <image source="../graphics/tilesets/town.png" width="144" height="468"/>
+<tileset name="town" tilewidth="48" tileheight="48" spacing="2" margin="1" tilecount="208" columns="8">
+ <image source="../graphics/tilesets/town.png" width="400" height="1300"/>
  <tile id="0">
   <properties>
    <property name="terrain" value="water"/>

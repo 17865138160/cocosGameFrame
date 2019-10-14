@@ -27,40 +27,43 @@ class TilesetUpdater:
 				os.makedirs(self.dest)
 			for tlconf in self.tlsconf["tilesets"]:
 				self.gen_tileset(tlconf)
-			
+	
 	def gen_tileset(self,tlconf):
 		imgname = tlconf["image"]
 		tilesize = tlconf["tilesize"]
+		scale = tlconf["scale"]
 		padding = tlconf["padding"]
+		dtilesize = [tilesize[0] * scale, tilesize[1] * scale]
 		
 		iimg = Image.open(self.source + "/" + imgname)
 		itsize = (iimg.size[0]//tilesize[0],iimg.size[1]//tilesize[1])
 		
-		oimg = Image.new(iimg.mode,(itsize[0]*(tilesize[0]+2*padding),itsize[1]*(tilesize[1]+2*padding)))
+		oimg = Image.new(iimg.mode,(itsize[0]*(dtilesize[0]+2*padding),itsize[1]*(dtilesize[1]+2*padding)))
 		for iy in range(itsize[1]):
 			for ix in range(itsize[0]):
 				# 截图
-				pc = iimg.crop((tilesize[0]*ix,tilesize[1]*iy,tilesize[0]*(ix+1),tilesize[1]*(iy+1)))
-				pl = iimg.crop((tilesize[0]*ix,tilesize[1]*iy,tilesize[0]*ix+padding,tilesize[1]*(iy+1)))
-				pr = iimg.crop((tilesize[0]*(ix+1)-padding,tilesize[1]*iy,tilesize[0]*(ix+1),tilesize[1]*(iy+1)))
-				pt = iimg.crop((tilesize[0]*ix,tilesize[1]*iy,tilesize[0]*(ix+1),tilesize[1]*iy+padding))
-				pb = iimg.crop((tilesize[0]*ix,tilesize[1]*(iy+1)-padding,tilesize[0]*(ix+1),tilesize[1]*(iy+1)))
-				plt = iimg.crop((tilesize[0]*ix,tilesize[1]*iy,tilesize[0]*ix+padding,tilesize[1]*iy+padding))
-				prt = iimg.crop((tilesize[0]*(ix+1)-padding,tilesize[1]*iy,tilesize[0]*(ix+1),tilesize[1]*iy+padding))
-				plb = iimg.crop((tilesize[0]*ix,tilesize[1]*(iy+1)-padding,tilesize[0]*ix+padding,tilesize[1]*(iy+1)))
-				prb = iimg.crop((tilesize[0]*(ix+1)-padding,tilesize[1]*(iy+1)-padding,tilesize[0]*(ix+1),tilesize[1]*(iy+1)))
+				pc = tools.scale_image(iimg.crop((tilesize[0]*ix,tilesize[1]*iy,tilesize[0]*(ix+1),tilesize[1]*(iy+1))),scale)
+				pl = tools.scale_image(iimg.crop((tilesize[0]*ix,tilesize[1]*iy,tilesize[0]*ix+padding,tilesize[1]*(iy+1))),scale)
+				pr = tools.scale_image(iimg.crop((tilesize[0]*(ix+1)-padding,tilesize[1]*iy,tilesize[0]*(ix+1),tilesize[1]*(iy+1))),scale)
+				pt = tools.scale_image(iimg.crop((tilesize[0]*ix,tilesize[1]*iy,tilesize[0]*(ix+1),tilesize[1]*iy+padding)),scale)
+				pb = tools.scale_image(iimg.crop((tilesize[0]*ix,tilesize[1]*(iy+1)-padding,tilesize[0]*(ix+1),tilesize[1]*(iy+1))),scale)
+				plt = tools.scale_image(iimg.crop((tilesize[0]*ix,tilesize[1]*iy,tilesize[0]*ix+padding,tilesize[1]*iy+padding)),scale)
+				prt = tools.scale_image(iimg.crop((tilesize[0]*(ix+1)-padding,tilesize[1]*iy,tilesize[0]*(ix+1),tilesize[1]*iy+padding)),scale)
+				plb = tools.scale_image(iimg.crop((tilesize[0]*ix,tilesize[1]*(iy+1)-padding,tilesize[0]*ix+padding,tilesize[1]*(iy+1))),scale)
+				prb = tools.scale_image(iimg.crop((tilesize[0]*(ix+1)-padding,tilesize[1]*(iy+1)-padding,tilesize[0]*(ix+1),tilesize[1]*(iy+1))),scale)
+				
 				# 粘贴
-				dx = ix * (tilesize[0]+2*padding)
-				dy = iy * (tilesize[1]+2*padding)
-				oimg.paste(pc,(dx+padding,dy+padding,dx+padding+tilesize[0],dy+padding+tilesize[1]))
-				oimg.paste(pl,(dx,dy+padding,dx+padding,dy+padding+tilesize[1]))
-				oimg.paste(pr,(dx+padding+tilesize[0],dy+padding,dx+2*padding+tilesize[0],dy+padding+tilesize[1]))
-				oimg.paste(pt,(dx+padding,dy,dx+padding+tilesize[0],dy+padding))
-				oimg.paste(pb,(dx+padding,dy+padding+tilesize[1],dx+padding+tilesize[0],dy+2*padding+tilesize[1]))
+				dx = ix * (dtilesize[0]+2*padding)
+				dy = iy * (dtilesize[1]+2*padding)
+				oimg.paste(pc,(dx+padding,dy+padding,dx+padding+dtilesize[0],dy+padding+dtilesize[1]))
+				oimg.paste(pl,(dx,dy+padding,dx+padding,dy+padding+dtilesize[1]))
+				oimg.paste(pr,(dx+padding+dtilesize[0],dy+padding,dx+2*padding+dtilesize[0],dy+padding+dtilesize[1]))
+				oimg.paste(pt,(dx+padding,dy,dx+padding+dtilesize[0],dy+padding))
+				oimg.paste(pb,(dx+padding,dy+padding+dtilesize[1],dx+padding+dtilesize[0],dy+2*padding+dtilesize[1]))
 				oimg.paste(plt,(dx,dy,dx+padding,dy+padding))
-				oimg.paste(prt,(dx+padding+tilesize[0],dy,dx+2*padding+tilesize[0],dy+padding))
-				oimg.paste(plb,(dx,dy+padding+tilesize[1],dx+padding,dy+2*padding+tilesize[1]))
-				oimg.paste(prb,(dx+padding+tilesize[0],dy+padding+tilesize[1],dx+2*padding+tilesize[0],dy+2*padding+tilesize[1]))
+				oimg.paste(prt,(dx+padding+dtilesize[0],dy,dx+2*padding+dtilesize[0],dy+padding))
+				oimg.paste(plb,(dx,dy+padding+dtilesize[1],dx+padding,dy+2*padding+dtilesize[1]))
+				oimg.paste(prb,(dx+padding+dtilesize[0],dy+padding+dtilesize[1],dx+2*padding+dtilesize[0],dy+2*padding+dtilesize[1]))
 				
 		oimg.save(self.dest + "/" + imgname)
 		

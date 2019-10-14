@@ -11,11 +11,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,32}</string>
+                <string>{48,96}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,32}</string>
+                <string>{48,96}</string>
                 <key>textureRect</key>
-                <string>{{1,1},{16,32}}</string>
+                <string>{{1,1},{48,96}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -26,11 +26,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,32}</string>
+                <string>{48,96}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,32}</string>
+                <string>{48,96}</string>
                 <key>textureRect</key>
-                <string>{{19,1},{16,32}}</string>
+                <string>{{1,99},{48,96}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -41,13 +41,13 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,32}</string>
+                <string>{48,96}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,32}</string>
+                <string>{48,96}</string>
                 <key>textureRect</key>
-                <string>{{1,35},{16,32}}</string>
+                <string>{{1,197},{48,96}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
             <key>main/effects/skill_fire2/fend1</key>
             <dict>
@@ -56,11 +56,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,32}</string>
+                <string>{48,96}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,32}</string>
+                <string>{48,96}</string>
                 <key>textureRect</key>
-                <string>{{37,1},{16,32}}</string>
+                <string>{{1,295},{48,96}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -71,11 +71,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,32}</string>
+                <string>{48,96}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,32}</string>
+                <string>{48,96}</string>
                 <key>textureRect</key>
-                <string>{{55,1},{16,32}}</string>
+                <string>{{1,393},{48,96}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -86,13 +86,13 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,32}</string>
+                <string>{48,96}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,32}</string>
+                <string>{48,96}</string>
                 <key>textureRect</key>
-                <string>{{35,35},{16,32}}</string>
+                <string>{{1,491},{48,96}}</string>
                 <key>textureRotated</key>
-                <true/>
+                <false/>
             </dict>
             <key>main/effects/skill_fire2/fmedi</key>
             <dict>
@@ -101,11 +101,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,32}</string>
+                <string>{48,96}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,32}</string>
+                <string>{48,96}</string>
                 <key>textureRect</key>
-                <string>{{73,1},{16,32}}</string>
+                <string>{{1,589},{48,96}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -116,11 +116,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,24}</string>
+                <string>{48,72}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,24}</string>
+                <string>{48,72}</string>
                 <key>textureRect</key>
-                <string>{{91,1},{16,24}}</string>
+                <string>{{1,687},{48,72}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -131,11 +131,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{69,35},{16,16}}</string>
+                <string>{{1,761},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -151,9 +151,9 @@
             <key>realTextureFileName</key>
             <string>skill_fire2.png</string>
             <key>size</key>
-            <string>{108,52}</string>
+            <string>{50,810}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:86d925d0da0ad6f7743ae746bf197f54:eec1d4bed89da3dbc5f09b3ec8703dea:f62fda317294cb60954ebbdf9676cd81$</string>
+            <string>$TexturePacker:SmartUpdate:16afc0cef1bfd6a710c8188be38646a9:4265cc3538d7440d77a2b134203c006f:f62fda317294cb60954ebbdf9676cd81$</string>
             <key>textureFileName</key>
             <string>skill_fire2.png</string>
         </dict>

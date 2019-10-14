@@ -9,14 +9,14 @@
   "nodes": {
     "8b852712-e70c-419f-8359-ce6b68682c75": {
       "id": "8b852712-e70c-419f-8359-ce6b68682c75",
-      "name": "betray.BetrayRole",
-      "title": "betray.BetrayRole (<label>)",
+      "name": "battle.Role",
+      "title": "battle.Role (<label>)",
       "description": "",
       "properties": {
         "label": "brole"
       },
       "display": {
-        "x": 156,
+        "x": 120,
         "y": -168
       }
     },
@@ -182,15 +182,6 @@
     {
       "version": "0.3.0",
       "scope": "node",
-      "name": "betray.BetrayRole",
-      "category": "action",
-      "title": "betray.BetrayRole (<label>)",
-      "description": null,
-      "properties": {}
-    },
-    {
-      "version": "0.3.0",
-      "scope": "node",
       "name": "game.RoleTeam",
       "category": "action",
       "title": "game.RoleTeam (<label>,<role>)",
@@ -221,6 +212,24 @@
       "name": "Group",
       "category": "action",
       "title": "Group (<label>,<elements>)",
+      "description": null,
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "game.EnemyTeam",
+      "category": "action",
+      "title": "game.EnemyTeam (<label>,<team>)",
+      "description": null,
+      "properties": {}
+    },
+    {
+      "version": "0.3.0",
+      "scope": "node",
+      "name": "battle.Role",
+      "category": "action",
+      "title": "battle.Role (<label>)",
       "description": null,
       "properties": {}
     }

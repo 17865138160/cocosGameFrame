@@ -9,10 +9,10 @@
 		,"context":"pl_window"
 	},
 	
-    "borders":[8,8,8,8],
+    "borders":[24,24,24,24],
 	
     "font":{
-        "name":"font_16"
+        "name":"normal"
     },
 	
     "moveuptime":0.2,

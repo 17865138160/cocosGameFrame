@@ -6,6 +6,6 @@
 		"maptype":"town",
 		"bgm":"village_10",
 		"moveorder":45,
-		"moveoffest":[0,4]
+		"moveoffest":[0,12]
 	}
 }

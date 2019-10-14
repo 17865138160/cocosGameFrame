@@ -10,7 +10,7 @@
             "source":"wg_rolelist",
             "type":"table",
             "config":{
-                "itemsize":[64,16],
+                "itemsize":[192,48],
                 "selectable":true,
                 "itemrows":5,
                 "itemcolumns":1,
@@ -23,7 +23,7 @@
             "source":"wg_items",
             "type":"table",
             "config":{
-                "itemsize":[72,16],
+                "itemsize":[216,48],
                 "selectable":true,
                 "itemrows":7,
                 "itemcolumns":1,
@@ -37,7 +37,7 @@
             "source":"wg_deposits",
             "type":"table",
             "config":{
-                "itemsize":[72,16],
+                "itemsize":[216,48],
                 "selectable":true,
                 "itemrows":9,
                 "itemcolumns":1,

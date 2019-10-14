@@ -2,13 +2,13 @@
     "meta":"ArchiveItem",
     "name":"archiveitem",
 	"namefont":{
-		"name":"font_16"
+		"name":"normal"
 	},
 	"datefont":{
-		"name":"font_8"
+		"name":"small"
 	},
 	"verfont":{
-		"name":"font_8"
+		"name":"small"
 	},
 	"newtext":"[新建游戏]",
 	"nexttext":"[下一页]"

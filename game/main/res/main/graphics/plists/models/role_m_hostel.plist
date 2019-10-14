@@ -11,11 +11,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{1,1},{16,16}}</string>
+                <string>{{1,1},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -26,11 +26,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{19,1},{16,16}}</string>
+                <string>{{51,1},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -46,9 +46,9 @@
             <key>realTextureFileName</key>
             <string>role_m_hostel.png</string>
             <key>size</key>
-            <string>{36,18}</string>
+            <string>{100,50}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:6bf1bada4a54655811181adf9a772413:7c3c631f6ab904bdcddfdbe51e8d4590:25b04681ac0862c5d26fbc886ada754a$</string>
+            <string>$TexturePacker:SmartUpdate:562e174b932c15e0d0a24889959d170e:710baeeefe192434c37183ea77d13d1d:25b04681ac0862c5d26fbc886ada754a$</string>
             <key>textureFileName</key>
             <string>role_m_hostel.png</string>
         </dict>

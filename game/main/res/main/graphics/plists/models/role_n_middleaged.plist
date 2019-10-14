@@ -11,11 +11,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{1,1},{16,16}}</string>
+                <string>{{1,1},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -26,11 +26,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{19,1},{16,16}}</string>
+                <string>{{51,1},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -41,11 +41,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{37,1},{16,16}}</string>
+                <string>{{101,1},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -56,11 +56,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{55,1},{16,16}}</string>
+                <string>{{151,1},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -71,11 +71,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{73,1},{16,16}}</string>
+                <string>{{201,1},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -86,11 +86,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{91,1},{16,16}}</string>
+                <string>{{251,1},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -106,9 +106,9 @@
             <key>realTextureFileName</key>
             <string>role_n_middleaged.png</string>
             <key>size</key>
-            <string>{108,18}</string>
+            <string>{300,50}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:e46a143f9f5bdc947ac2c32739be16d9:d49c04e1a3a8724453a6baf9d101b93d:7b86e627b0a2b4cd8dd3620c85375257$</string>
+            <string>$TexturePacker:SmartUpdate:9fe592d25d9e57d173466ae13fa023a9:369ca533680fd7f971614a64f65901ba:7b86e627b0a2b4cd8dd3620c85375257$</string>
             <key>textureFileName</key>
             <string>role_n_middleaged.png</string>
         </dict>

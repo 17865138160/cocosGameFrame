@@ -11,11 +11,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{1,1},{16,16}}</string>
+                <string>{{1,1},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -26,11 +26,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{19,1},{16,16}}</string>
+                <string>{{51,1},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -41,11 +41,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{37,1},{16,16}}</string>
+                <string>{{101,1},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -61,9 +61,9 @@
             <key>realTextureFileName</key>
             <string>skill_fire1.png</string>
             <key>size</key>
-            <string>{54,18}</string>
+            <string>{150,50}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:dd8fdd048ed2aafd89dddb29eed4bd50:ccee699fe17967bb2cc0981c0eb55c1e:68c349ece411761124540e4a667816ef$</string>
+            <string>$TexturePacker:SmartUpdate:d6345279d75112eddb2b905d720e59b7:771c2e853fff1aa384a052126ac4961a:68c349ece411761124540e4a667816ef$</string>
             <key>textureFileName</key>
             <string>skill_fire1.png</string>
         </dict>

@@ -11,7 +11,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_16"
+					"name":"normal"
 				}
             },
 			"params":{
@@ -22,8 +22,8 @@
             "source":"wg_archives",
             "type":"table",
             "config":{
-                "itemsize":[160,32],
-				"itemspace":[0,4],
+                "itemsize":[480,96],
+				"itemspace":[0,12],
                 "selectable":true,
                 "itemrows":4,
                 "itemcolumns":1,
@@ -36,7 +36,7 @@
             "source":"wg_archselect",
             "type":"table",
             "config":{
-                "itemsize":[64,16],
+                "itemsize":[192,48],
                 "selectable":true,
                 "itemrows":2,
                 "itemcolumns":1,

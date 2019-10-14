@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="111" height="93" tilewidth="16" tileheight="16" nextobjectid="6">
+<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="111" height="93" tilewidth="48" tileheight="48" nextobjectid="6">
  <properties>
   <property name="zorder" type="int" value="10"/>
  </properties>
@@ -51655,7 +51655,7 @@
   </data>
  </layer>
  <objectgroup name="objects">
-  <object id="1" type="teleport" x="432" y="784" width="16" height="16">
+  <object id="1" type="teleport" x="1296" y="2352" width="48" height="48">
    <properties>
     <property name="in_pos" value="p_xuzhou"/>
     <property name="out_face" value="UP"/>
@@ -51664,7 +51664,7 @@
     <property name="out_pos" value="p_enter"/>
    </properties>
   </object>
-  <object id="2" type="teleport" x="832" y="224" width="32" height="16">
+  <object id="2" type="teleport" x="2496" y="672" width="96" height="48">
    <properties>
     <property name="in_pos" value="p_zhengxuan"/>
     <property name="out_face" value="UP"/>
@@ -51673,7 +51673,7 @@
     <property name="out_pos" value="p_enter"/>
    </properties>
   </object>
-  <object id="3" type="teleport" x="864" y="320" width="16" height="16">
+  <object id="3" type="teleport" x="2592" y="960" width="48" height="48">
    <properties>
     <property name="out_face" value="RIGHT"/>
     <property name="out_map" value="cave_xuzhou_map"/>
@@ -51681,7 +51681,7 @@
     <property name="out_pos" value="p_enter"/>
    </properties>
   </object>
-  <object id="4" type="teleport" x="992" y="384" width="16" height="16">
+  <object id="4" type="teleport" x="2976" y="1152" width="48" height="48">
    <properties>
     <property name="in_pos" value="p_yuanshudown"/>
     <property name="out_face" value="UP"/>
@@ -51690,7 +51690,7 @@
     <property name="out_pos" value="p_yuanshudown"/>
    </properties>
   </object>
-  <object id="5" type="teleport" x="976" y="272" width="16" height="16">
+  <object id="5" type="teleport" x="2928" y="816" width="48" height="48">
    <properties>
     <property name="in_pos" value="p_yuanshutop"/>
     <property name="out_face" value="LEFT"/>

@@ -295,8 +295,8 @@
 			"skill_recovery":"$(respath)/main/effects/skill_recovery.json"
 		}
 		,"fonts":{
-			"font_8":"$(respath)/main/fonts/bm8/font_8.json",
-			"font_16":"$(respath)/main/fonts/bm16/font_16.json"
+			"small":"$(respath)/main/fonts/small.json",
+			"normal":"$(respath)/main/fonts/normal.json"
 		}
 		,"items":{
 			"chest":"$(respath)/main/items/chest.json"

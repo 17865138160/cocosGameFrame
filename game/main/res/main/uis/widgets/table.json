@@ -10,14 +10,14 @@
 		,"context":"pl_window"
 	},
 	
-	"bgborder":[8,8,8,8],
+	"bgborder":[24,24,24,24],
 	"tbborder":[0,0,0,0],
 	
 	"cursorimg":"#main/images/cursor_r",
 	"cursordelay":0.3,
 	"cursorrate":2,
 	
-	"itemsize":[32,16],
+	"itemsize":[96,48],
 	"itemspace":[0,0],
 	"itemcolumns":1,
 	"itemrows":2,

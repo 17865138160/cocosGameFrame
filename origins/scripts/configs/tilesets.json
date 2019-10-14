@@ -5,21 +5,25 @@
 		{
 			"image":"build.png",
 			"tilesize":[16,16],
+			"scale":3,
 			"padding":1
 		},
 		{
 			"image":"cave.png",
 			"tilesize":[16,16],
+			"scale":3,
 			"padding":1
 		},
 		{
 			"image":"region.png",
 			"tilesize":[16,16],
+			"scale":3,
 			"padding":1
 		},
 		{
 			"image":"town.png",
 			"tilesize":[16,16],
+			"scale":3,
 			"padding":1
 		}
 	]

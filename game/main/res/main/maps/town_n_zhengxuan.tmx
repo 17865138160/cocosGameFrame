@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="43" height="32" tilewidth="16" tileheight="16" nextobjectid="6">
+<map version="1.0" tiledversion="1.0.3" orientation="orthogonal" renderorder="right-down" width="43" height="32" tilewidth="48" tileheight="48" nextobjectid="6">
  <tileset firstgid="1" source="town.tsx"/>
  <layer name="base" width="43" height="32">
   <properties>
@@ -5534,30 +5534,30 @@
   </data>
  </layer>
  <objectgroup name="objects">
-  <object id="1" type="teleport" x="368" y="352" width="16" height="16">
+  <object id="1" type="teleport" x="1104" y="1056" width="48" height="48">
    <properties>
     <property name="in_pos" value="p_enter"/>
    </properties>
   </object>
-  <object id="2" type="teleport" x="336" y="368" width="128" height="16">
+  <object id="2" type="teleport" x="1008" y="1104" width="384" height="48">
    <properties>
     <property name="out_map" value="#region"/>
     <property name="out_pos" value="#region_in"/>
    </properties>
   </object>
-  <object id="3" type="teleport" x="208" y="128" width="16" height="128">
+  <object id="3" type="teleport" x="624" y="384" width="48" height="384">
    <properties>
     <property name="out_map" value="#region"/>
     <property name="out_pos" value="#region_in"/>
    </properties>
   </object>
-  <object id="4" type="teleport" x="224" y="112" width="192" height="16">
+  <object id="4" type="teleport" x="672" y="336" width="576" height="48">
    <properties>
     <property name="out_map" value="#region"/>
     <property name="out_pos" value="#region_in"/>
    </properties>
   </object>
-  <object id="5" type="teleport" x="304" y="224" width="16" height="16">
+  <object id="5" type="teleport" x="912" y="672" width="48" height="48">
    <properties>
     <property name="in_pos" value="p_zhengxuan"/>
     <property name="out_face" value="UP"/>

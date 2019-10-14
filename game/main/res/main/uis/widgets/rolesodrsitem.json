@@ -3,10 +3,10 @@
     "name":"rolesodrsitem",
     "adviserimg":"#main/images/start",
 	"namefont":{
-		"name":"font_16"
+		"name":"normal"
 	},
 	"sodrsfont":{
-		"name":"font_8"
+		"name":"small"
 	},
-	"sodrswidth":40
+	"sodrswidth":120
 }

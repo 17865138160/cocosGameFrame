@@ -99,7 +99,7 @@
             "type":"label",
 			"config":{
 				"font":{
-					"name":"font_16"
+					"name":"normal"
 				}
             }
         }
@@ -108,7 +108,7 @@
             "type":"label",
 			"config":{
 				"font":{
-					"name":"font_16"
+					"name":"normal"
 				}
             }
         }
@@ -117,7 +117,7 @@
             "type":"label",
 			"config":{
 				"font":{
-					"name":"font_16"
+					"name":"normal"
 				}
             }
         }

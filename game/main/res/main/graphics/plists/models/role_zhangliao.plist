@@ -11,13 +11,13 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{48,32}</string>
+                <string>{144,96}</string>
                 <key>spriteSourceSize</key>
-                <string>{48,32}</string>
+                <string>{144,96}</string>
                 <key>textureRect</key>
-                <string>{{19,19},{48,32}}</string>
+                <string>{{151,51},{144,96}}</string>
                 <key>textureRotated</key>
-                <false/>
+                <true/>
             </dict>
             <key>main/models/role_zhangliao/attack2</key>
             <dict>
@@ -26,11 +26,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{48,32}</string>
+                <string>{144,96}</string>
                 <key>spriteSourceSize</key>
-                <string>{48,32}</string>
+                <string>{144,96}</string>
                 <key>textureRect</key>
-                <string>{{69,19},{48,32}}</string>
+                <string>{{1,101},{144,96}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -41,11 +41,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{24,16}</string>
+                <string>{72,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{24,16}</string>
+                <string>{72,48}</string>
                 <key>textureRect</key>
-                <string>{{1,1},{24,16}}</string>
+                <string>{{1,1},{72,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -56,11 +56,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{27,1},{16,16}}</string>
+                <string>{{75,1},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -71,11 +71,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{45,1},{16,16}}</string>
+                <string>{{125,1},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -86,11 +86,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{63,1},{16,16}}</string>
+                <string>{{175,1},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -101,11 +101,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{81,1},{16,16}}</string>
+                <string>{{1,51},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -116,11 +116,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{99,1},{16,16}}</string>
+                <string>{{51,51},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -131,11 +131,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{1,19},{16,16}}</string>
+                <string>{{101,51},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -151,9 +151,9 @@
             <key>realTextureFileName</key>
             <string>role_zhangliao.png</string>
             <key>size</key>
-            <string>{118,52}</string>
+            <string>{248,198}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:99fce8f312f7e3c69dd1f4cb730eb628:4cd4c1ac55dbca17277a0bfdd71d5861:bf251e49f311e32180b2a34f43623d78$</string>
+            <string>$TexturePacker:SmartUpdate:ff033f67136fa9e670b25c6b3df91d3a:2d3b55d21c56c1409d72569963f5e2ce:bf251e49f311e32180b2a34f43623d78$</string>
             <key>textureFileName</key>
             <string>role_zhangliao.png</string>
         </dict>

@@ -11,11 +11,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{1,1},{16,16}}</string>
+                <string>{{1,1},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -26,11 +26,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{19,1},{16,16}}</string>
+                <string>{{51,1},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -46,9 +46,9 @@
             <key>realTextureFileName</key>
             <string>role_n_caocao.png</string>
             <key>size</key>
-            <string>{36,18}</string>
+            <string>{100,50}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:e5e41b908f38468d64118259468bea70:2ae6b4b819db10c311cc4b2433d86a5a:8ab2447adb06410b8062ed826d9f67ab$</string>
+            <string>$TexturePacker:SmartUpdate:81aeba8b2eb0aeebde5e2ac627ca9409:993185cab90a06d1fd29f753044ccfc2:8ab2447adb06410b8062ed826d9f67ab$</string>
             <key>textureFileName</key>
             <string>role_n_caocao.png</string>
         </dict>

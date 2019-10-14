@@ -2,6 +2,7 @@
 
 import os,sys,itertools,json,configparser,math,struct,subprocess
 import hashlib,re,uuid,zlib
+from PIL import Image
 
 CURPATH = os.path.split(os.path.realpath(__file__))[0]
 
@@ -33,6 +34,12 @@ def relpath(p1,p2, sep=os.path.sep, pardir=os.path.pardir):
     if not common:  
         return p2      
     return sep.join([pardir] * len(u1) + u2) 
+
+# 放大图片filter: NEAREST , BILINEAR , BICUBIC , ANTIALIAS
+def scale_image(img,scale = 1, filter = Image.NEAREST):
+	newx = 1 if img.size[0] == 1 else img.size[0]*scale
+	newy = 1 if img.size[1] == 1 else img.size[1]*scale
+	return img.resize((newx, newy),filter)
 
 def read_json(jfile):
 	with open(jfile, 'r', encoding='utf-8') as f:

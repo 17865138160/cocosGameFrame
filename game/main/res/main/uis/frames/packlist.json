@@ -26,7 +26,7 @@
             "type":"label",
 			"config":{
 				"font":{
-					"name":"font_16"
+					"name":"normal"
 				}
             },
 			"params":{
@@ -37,7 +37,7 @@
             "source":"wg_packlist",
             "type":"table",
             "config":{
-                "itemsize":[210,16],
+                "itemsize":[630,48],
                 "itemrows":9,
                 "itemcolumns":1,
 				"itemwidget":{

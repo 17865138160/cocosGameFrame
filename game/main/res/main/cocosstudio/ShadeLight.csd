@@ -4,10 +4,10 @@
     <Content>
       <Animation Duration="0" Speed="1.0000" />
       <ObjectData Name="Layer" Tag="21" ctype="GameLayerObjectData">
-        <Size X="426.0000" Y="240.0000" />
+        <Size X="1280.0000" Y="720.0000" />
         <Children>
-          <AbstractNodeData Name="pl_shade" ActionTag="1370565286" Tag="22" IconVisible="False" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" ctype="PanelObjectData">
-            <Size X="426.0000" Y="240.0000" />
+          <AbstractNodeData Name="pl_shade" ActionTag="1370565286" Tag="22" IconVisible="False" TouchEnable="True" ClipAble="False" ComboBoxIndex="1" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+            <Size X="1280.0000" Y="720.0000" />
             <AnchorPoint />
             <Position />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />

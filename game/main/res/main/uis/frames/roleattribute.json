@@ -10,9 +10,9 @@
             "source":"pl_attributes/wg_equipments",
             "type":"table",
             "config":{
-                "tbborder":[8,0,0,0],
-                "itemsize":[64,16],
-				"itemspace":[8,0],
+                "tbborder":[24,0,0,0],
+                "itemsize":[192,48],
+				"itemspace":[24,0],
                 "itemrows":2,
                 "itemcolumns":2,
 				"itemanchor":[0,0.5],
@@ -45,9 +45,9 @@
             "source":"pl_skillfmts/wg_skills",
             "type":"table",
             "config":{
-				"tbborder":[8,8,0,0],
-                "itemsize":[48,16],
-				"itemspace":[40,0],
+				"tbborder":[24,24,0,0],
+                "itemsize":[144,48],
+				"itemspace":[120,0],
                 "itemrows":2,
                 "itemcolumns":2,
 				"itemanchor":[0,0.5],
@@ -60,9 +60,9 @@
             "source":"pl_skillfmts/wg_formations",
             "type":"table",
             "config":{
-				"tbborder":[8,8,0,0],
-                "itemsize":[48,16],
-				"itemspace":[40,0],
+				"tbborder":[24,24,0,0],
+                "itemsize":[144,48],
+				"itemspace":[120,0],
                 "itemrows":5,
                 "itemcolumns":2,
 				"itemanchor":[0,0.5],
@@ -75,9 +75,9 @@
             "source":"wg_strategys",
             "type":"table",
             "config":{
-				"tbborder":[8,8,0,0],
-                "itemsize":[48,16],
-				"itemspace":[40,0],
+				"tbborder":[24,24,0,0],
+                "itemsize":[144,48],
+				"itemspace":[120,0],
                 "itemrows":10,
                 "itemcolumns":2,
 				"itemanchor":[0,0.5],
@@ -91,7 +91,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_16"
+					"name":"normal"
 				}
             }
 		}
@@ -100,7 +100,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_8"
+					"name":"small"
 				}
             },
 			"params":{
@@ -112,7 +112,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_8"
+					"name":"small"
 				}
             },
 			"params":{
@@ -124,7 +124,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_16"
+					"name":"normal"
 				}
             },
 			"params":{
@@ -136,7 +136,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_8"
+					"name":"small"
 				}
             },
 			"params":{
@@ -148,7 +148,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_16"
+					"name":"normal"
 				}
             },
 			"params":{
@@ -160,7 +160,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_8"
+					"name":"small"
 				}
             },
 			"params":{
@@ -172,7 +172,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_16"
+					"name":"normal"
 				}
             },
 			"params":{
@@ -184,7 +184,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_8"
+					"name":"small"
 				}
             },
 			"params":{
@@ -196,7 +196,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_16"
+					"name":"normal"
 				}
             },
 			"params":{
@@ -208,7 +208,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_8"
+					"name":"small"
 				}
             },
 			"params":{
@@ -220,7 +220,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_16"
+					"name":"normal"
 				}
             },
 			"params":{
@@ -232,7 +232,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_8"
+					"name":"small"
 				}
             },
 			"params":{

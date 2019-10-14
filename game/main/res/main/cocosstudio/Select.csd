@@ -4,29 +4,29 @@
     <Content>
       <Animation Duration="0" Speed="1.0000" />
       <ObjectData Name="Layer" Tag="34" ctype="GameLayerObjectData">
-        <Size X="426.0000" Y="240.0000" />
+        <Size X="1280.0000" Y="720.0000" />
         <Children>
-          <AbstractNodeData Name="wg_message" ActionTag="1933698942" Tag="35" IconVisible="False" LeftMargin="101.0000" RightMargin="165.0000" TopMargin="144.0000" BottomMargin="16.0000" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
-            <Size X="160.0000" Y="80.0000" />
+          <AbstractNodeData Name="wg_message" ActionTag="1933698942" Tag="35" IconVisible="False" LeftMargin="303.0000" RightMargin="-357.0000" TopMargin="-48.0000" BottomMargin="48.0000" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+            <Size X="480.0000" Y="240.0000" />
             <AnchorPoint ScaleY="1.0000" />
-            <Position X="101.0000" Y="96.0000" />
+            <Position X="303.0000" Y="288.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.2371" Y="0.4000" />
-            <PreSize X="0.6250" Y="0.3333" />
+            <PrePosition X="0.7113" Y="1.2000" />
+            <PreSize X="1.1268" Y="1.0000" />
             <SingleColor A="255" R="150" G="200" B="255" />
             <FirstColor A="255" R="150" G="200" B="255" />
             <EndColor A="255" R="255" G="255" B="255" />
             <ColorVector ScaleY="1.0000" />
           </AbstractNodeData>
-          <AbstractNodeData Name="wg_select" ActionTag="-1183437082" Tag="36" IconVisible="False" LeftMargin="261.0000" RightMargin="101.0000" TopMargin="144.0000" BottomMargin="48.0000" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
-            <Size X="64.0000" Y="48.0000" />
+          <AbstractNodeData Name="wg_select" ActionTag="-1183437082" Tag="36" IconVisible="False" LeftMargin="783.0000" RightMargin="-549.0000" TopMargin="-48.0000" BottomMargin="144.0000" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
+            <Size X="192.0000" Y="144.0000" />
             <AnchorPoint ScaleY="1.0000" />
-            <Position X="261.0000" Y="96.0000" />
+            <Position X="783.0000" Y="288.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
-            <PrePosition X="0.6127" Y="0.4000" />
-            <PreSize X="0.2500" Y="0.2000" />
+            <PrePosition X="1.8380" Y="1.2000" />
+            <PreSize X="0.4507" Y="0.6000" />
             <SingleColor A="255" R="150" G="200" B="255" />
             <FirstColor A="255" R="150" G="200" B="255" />
             <EndColor A="255" R="255" G="255" B="255" />

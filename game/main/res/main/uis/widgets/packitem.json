@@ -2,12 +2,12 @@
     "meta":"PackItem",
     "name":"packitem",
 	"typefont":{
-		"name":"font_16"
+		"name":"normal"
 	},
 	"namefont":{
-		"name":"font_16"
+		"name":"normal"
 	},
 	"verfont":{
-		"name":"font_16"
+		"name":"normal"
 	}
 }

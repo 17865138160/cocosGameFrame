@@ -4,7 +4,7 @@
 			"name":"role_liubei",
 			"meta":"RoleModel",
 			"color":"pink",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{
@@ -126,7 +126,7 @@
 			"name":"role_zhugeliang",
 			"meta":"RoleModel",
 			"color":"pink",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{
@@ -250,7 +250,7 @@
 			"name":"role_guanyu",
 			"meta":"RoleModel",
 			"color":"darkblue",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{
@@ -372,7 +372,7 @@
 			"name":"role_zhangfei",
 			"meta":"RoleModel",
 			"color":"green",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{
@@ -494,7 +494,7 @@
 			"name":"role_zhuling",
 			"meta":"RoleModel",
 			"color":"pink",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{
@@ -616,7 +616,7 @@
 			"name":"role_luzhao",
 			"meta":"RoleModel",
 			"color":"darkblue",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{
@@ -738,7 +738,7 @@
 			"name":"role_chendeng",
 			"meta":"RoleModel",
 			"color":"darkblue",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{
@@ -860,7 +860,7 @@
 			"name":"role_zhaoyun",
 			"meta":"RoleModel",
 			"color":"darkblue",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{
@@ -982,7 +982,7 @@
 			"name":"role_yanliang",
 			"meta":"RoleModel",
 			"color":"darkblue",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{
@@ -1104,7 +1104,7 @@
 			"name":"role_wenchou",
 			"meta":"RoleModel",
 			"color":"darkblue",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{

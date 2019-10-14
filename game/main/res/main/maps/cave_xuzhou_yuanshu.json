@@ -6,6 +6,6 @@
 		"maptype":"cave",
 		"bgm":"cave_17",
 		"moveorder":45,
-		"moveoffest":[0,4]
+		"moveoffest":[0,12]
 	}
 }

@@ -1,10 +1,10 @@
 {
     "csb":"$(respath)/main/cocosstudio/BattleRole.csb"
 	,"params":{
-		"roleY": 8,
+		"roleY": 24,
 		"p":{
-			"stand":72,
-			"gattack":96
+			"stand":216,
+			"gattack":288
 		},
 		"selectimg":"#main/images/hand_l",
 		"cursorrate":10
@@ -15,7 +15,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_16"
+					"name":"normal"
 				}
             }
 		}
@@ -24,7 +24,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_8"
+					"name":"small"
 				}
             }
 		}
@@ -43,7 +43,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_16"
+					"name":"normal"
 				}
             }
 		}
@@ -52,7 +52,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_8"
+					"name":"small"
 				}
             }
 		}

@@ -10,7 +10,7 @@
             "source":"wg_rolelist",
             "type":"table",
             "config":{
-                "itemsize":[64,16],
+                "itemsize":[192,48],
                 "selectable":true,
                 "itemrows":5,
                 "itemcolumns":1,
@@ -23,7 +23,7 @@
             "source":"wg_items",
             "type":"table",
             "config":{
-                "itemsize":[72,16],
+                "itemsize":[216,48],
                 "selectable":true,
                 "itemrows":7,
                 "itemcolumns":1,
@@ -37,7 +37,7 @@
             "source":"wg_equipments",
             "type":"table",
             "config":{
-                "itemsize":[64,16],
+                "itemsize":[192,48],
                 "selectable":true,
                 "itemrows":2,
                 "itemcolumns":2,
@@ -52,7 +52,7 @@
             "source":"wg_operates",
             "type":"table",
             "config":{
-                "itemsize":[32,16],
+                "itemsize":[96,48],
                 "selectable":true,
                 "itemrows":4,
                 "itemcolumns":1,
@@ -86,7 +86,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_16"
+					"name":"normal"
 				}
 			},
 			"params":{
@@ -98,7 +98,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_8"
+					"name":"small"
 				}
 			}
 		}
@@ -107,7 +107,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_16"
+					"name":"normal"
 				}
 			},
 			"params":{
@@ -119,7 +119,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_8"
+					"name":"small"
 				}
 			}
 		}

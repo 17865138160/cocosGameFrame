@@ -115,6 +115,7 @@ class ModelUpdater:
 			},
 			"frames":[]
 		}
+		scale = int(mdconf["modelsize"][0] / self.walksize[0])
 		
 		# 步行图
 		if "walk" in mdconf:
@@ -139,6 +140,7 @@ class ModelUpdater:
 							indeximg = indeximg.transpose(Image.FLIP_TOP_BOTTOM)
 					if i < len(woffests):
 						indeximg = self.move_image(indeximg,woffests[i])
+					indeximg = tools.scale_image(indeximg, scale)
 					self.save_image(self.destimages + "/" + mdconf["name"], "walk_" + wtype + str(i+1) + ".png", indeximg)
 					mdcnf["frames"].append("walk_" + wtype + str(i+1))
 		
@@ -166,6 +168,7 @@ class ModelUpdater:
 						indeximg = indeximg.transpose(Image.FLIP_TOP_BOTTOM)
 				if i < len(doffests):
 					indeximg = self.move_image(indeximg,doffests[i])
+				indeximg = tools.scale_image(indeximg, scale)
 				self.save_image(self.destimages + "/" + mdconf["name"], "death" + str(i+1) + ".png", indeximg)
 				mdcnf["frames"].append("death" + str(i+1))
 			
@@ -195,6 +198,7 @@ class ModelUpdater:
 						indeximg = indeximg.transpose(Image.FLIP_TOP_BOTTOM)
 				if i < len(aoffests):
 					indeximg = self.move_image(indeximg,aoffests[i])
+				indeximg = tools.scale_image(indeximg, scale)
 				self.save_image(self.destimages + "/" + mdconf["name"], "attack" + str(i+1) + ".png", indeximg)
 				mdcnf["frames"].append("attack" + str(i+1))
 				

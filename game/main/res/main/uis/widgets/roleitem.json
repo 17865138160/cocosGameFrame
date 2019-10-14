@@ -3,6 +3,6 @@
     "name":"roleitem",
     "adviserimg":"#main/images/start",
 	"font":{
-		"name":"font_16"
+		"name":"normal"
 	}
 }

@@ -10,7 +10,7 @@
             "source":"wg_function",
             "type":"table",
 			"config":{
-				"itemsize":[32,16],
+				"itemsize":[96,48],
                 "selectable":true,
                 "itemrows":6,
                 "itemcolumns":1,

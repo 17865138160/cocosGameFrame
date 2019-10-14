@@ -18,7 +18,7 @@
 							"type":"label",
 							"config":{
 								"font":{
-									"name":"font_8"
+									"name":"small"
 								}
 							},
 							"params":{
@@ -30,7 +30,7 @@
 							"type":"label",
 							"config":{
 								"font":{
-									"name":"font_8"
+									"name":"small"
 								}
 							},
 							"params":{
@@ -42,8 +42,8 @@
 						"pl_window":"pl_window"
 					}
 				},
-                "itemsize":[48,16],
-				"itemspace":[24,0],
+                "itemsize":[144,48],
+				"itemspace":[72,0],
                 "selectable":true,
                 "itemrows":3,
                 "itemcolumns":2,

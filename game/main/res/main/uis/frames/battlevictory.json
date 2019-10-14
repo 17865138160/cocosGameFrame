@@ -15,7 +15,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_8"
+					"name":"small"
 				}
             },
 			"params":{
@@ -27,7 +27,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_8"
+					"name":"small"
 				}
             }
 		}
@@ -36,7 +36,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_8"
+					"name":"small"
 				}
             },
 			"params":{
@@ -48,7 +48,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_8"
+					"name":"small"
 				}
             }
 		}

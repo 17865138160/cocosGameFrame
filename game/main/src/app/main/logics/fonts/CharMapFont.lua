@@ -20,6 +20,7 @@ end
 function CharMapFont:ctor(text,params)
 	self:setCharMap(self._alias,self.size[1],self.size[2],self.start)
 	self:setString(text)
+	self:setScale(3)
 end
 
 -- 析构函数
@@ -34,17 +35,17 @@ end
 
 -- 获得字体的高度
 function CharMapFont:getFontHeight()
-	return self.size[2]
+	return self.size[2] * 3
 end
 
 -- 获得字符的宽度(UTF字符)
 function CharMapFont:getCharWidth(uch)
-	return self.size[1]
+	return self.size[1] * 3
 end
 
 -- 获得字符的最大宽度
 function CharMapFont:getCharMaxWidth()
-	return self.size[1]
+	return self.size[1] * 3
 end
 
 -- 获得字体名称

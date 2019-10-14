@@ -11,11 +11,11 @@
                 <key>spriteOffset</key>
                 <string>{0,0}</string>
                 <key>spriteSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>spriteSourceSize</key>
-                <string>{16,16}</string>
+                <string>{48,48}</string>
                 <key>textureRect</key>
-                <string>{{1,1},{16,16}}</string>
+                <string>{{1,1},{48,48}}</string>
                 <key>textureRotated</key>
                 <false/>
             </dict>
@@ -31,9 +31,9 @@
             <key>realTextureFileName</key>
             <string>skill_revive.png</string>
             <key>size</key>
-            <string>{18,18}</string>
+            <string>{50,50}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:c29f1e89734be15a561c852199d09f50:0ca3c75cc3701282aa1cac9b2999cc8e:f21408272ebf3a90c48eab0b59d69a39$</string>
+            <string>$TexturePacker:SmartUpdate:e640da2067b973569db4ca6f18bb2152:2f1d238d39f4ffe6dd887bc7f213d40d:f21408272ebf3a90c48eab0b59d69a39$</string>
             <key>textureFileName</key>
             <string>skill_revive.png</string>
         </dict>

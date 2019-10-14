@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset name="cave" tilewidth="16" tileheight="16" spacing="2" margin="1" tilecount="160" columns="8">
- <image source="../graphics/tilesets/cave.png" width="144" height="360"/>
+<tileset name="cave" tilewidth="48" tileheight="48" spacing="2" margin="1" tilecount="160" columns="8">
+ <image source="../graphics/tilesets/cave.png" width="400" height="1000"/>
  <tile id="0">
   <properties>
    <property name="block" type="bool" value="true"/>

@@ -11,7 +11,7 @@
 			"type":"label",
 			"config":{
 				"font":{
-					"name":"font_16"
+					"name":"normal"
 				}
             }
 		}
@@ -19,7 +19,7 @@
             "source":"wg_words",
             "type":"table",
             "config":{
-                "itemsize":[16,16],
+                "itemsize":[48,48],
                 "selectable":true,
                 "itemrows":6,
                 "itemcolumns":6,
@@ -32,7 +32,7 @@
             "source":"wg_functions",
             "type":"table",
             "config":{
-                "itemsize":[32,16],
+                "itemsize":[96,48],
                 "selectable":true,
                 "itemrows":5,
                 "itemcolumns":1,
@@ -65,7 +65,7 @@
             "source":"wg_select",
             "type":"table",
             "config":{
-                "itemsize":[32,16],
+                "itemsize":[96,48],
                 "selectable":true,
                 "itemrows":2,
                 "itemcolumns":1,

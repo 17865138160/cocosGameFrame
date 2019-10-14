@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os,itertools,json,configparser
+from PIL import Image
 
 def all_equal(elements):  
     first_element = elements[0]  
@@ -46,6 +47,12 @@ def read_config(cfile,fencding='utf-8'):
 	config = configparser.ConfigParser()
 	config.read(cfile, encoding=fencding)
 	return config
+
+# 放大图片filter: NEAREST , BILINEAR , BICUBIC , ANTIALIAS
+def scale_image(img,scale = 1, filter = Image.NEAREST):
+	newx = 1 if img.size[0] == 1 else img.size[0]*scale
+	newy = 1 if img.size[1] == 1 else img.size[1]*scale
+	return img.resize((newx, newy),filter)
 
 # 获得脚本配置
 def get_scriptconfig():

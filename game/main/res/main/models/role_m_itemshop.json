@@ -2,8 +2,8 @@
     "name": "role_m_itemshop",
     "meta": "RoleModel",
     "modelsize": [
-        16,
-        16
+        48,
+        48
     ],
     "anchor": [
         0.5,

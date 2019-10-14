@@ -7,9 +7,9 @@
 			"game.TeamRoles":"app.main.logics.behavior3s.game.TeamRoles",
 			"game.EnemyTeam":"app.main.logics.behavior3s.game.EnemyTeam",
 			"battle.Attack":"app.main.logics.behavior3s.battle.Attack",
+			"battle.Role":"app.main.logics.behavior3s.battle.Role",
 			"patrol.Directs":"app.main.logics.behavior3s.patrol.Directs",
-			"patrol.Move":"app.main.logics.behavior3s.patrol.Move",
-			"betray.BetrayRole":"app.main.logics.behavior3s.betray.BetrayRole"
+			"patrol.Move":"app.main.logics.behavior3s.patrol.Move"
 		}
 		,"battles":{
 			"envs":{

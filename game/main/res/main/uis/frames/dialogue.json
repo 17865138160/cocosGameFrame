@@ -14,7 +14,7 @@
             "source":"wg_select",
             "type":"table",
             "config":{
-                "itemsize":[48,16],
+                "itemsize":[144,48],
                 "selectable":true,
                 "itemrows":2,
                 "itemcolumns":1,

@@ -4,7 +4,7 @@
 			"name":"role_m_equipshop",
 			"meta":"RoleModel",
 			"color":"green",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{
@@ -34,7 +34,7 @@
 			"name":"role_m_hostel",
 			"meta":"RoleModel",
 			"color":"pink",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{
@@ -64,7 +64,7 @@
 			"name":"role_m_itemshop",
 			"meta":"RoleModel",
 			"color":"green",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{
@@ -94,7 +94,7 @@
 			"name":"role_m_record",
 			"meta":"RoleModel",
 			"color":"darkblue",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{
@@ -124,7 +124,7 @@
 			"name":"role_m_store",
 			"meta":"RoleModel",
 			"color":"pink",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{
@@ -154,7 +154,7 @@
 			"name":"role_m_training",
 			"meta":"RoleModel",
 			"color":"darkblue",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{

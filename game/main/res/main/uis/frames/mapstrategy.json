@@ -10,7 +10,7 @@
             "source":"wg_strategys",
             "type":"table",
             "config":{
-                "itemsize":[48,16],
+                "itemsize":[144,48],
                 "selectable":true,
                 "itemcolumns":1,
                 "itemrows":5,
@@ -23,7 +23,7 @@
             "source":"wg_formations",
             "type":"table",
             "config":{
-                "itemsize":[48,16],
+                "itemsize":[144,48],
                 "selectable":true,
                 "itemcolumns":1,
                 "itemrows":7,

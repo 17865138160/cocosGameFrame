@@ -67,6 +67,7 @@
         <Project Name="TextInput.csd" Type="Layer" />
         <Project Name="TradeSelect.csd" Type="Layer" />
         <Project Name="Window.csd" Type="Layer" />
+        <Image Name="window.png" />
       </RootFolder>
     </Group>
   </SolutionFolder>

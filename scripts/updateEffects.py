@@ -69,6 +69,7 @@ class EffectUpdater:
 		for (fname,frect) in efconf["frames"].items():
 			efcnf["frames"].append(fname)
 			fimg = effectimg.crop((frect[0],frect[1],frect[0]+frect[2],frect[1]+frect[3]))
+			fimg = tools.scale_image(fimg,efconf["scale"])
 			fimg.save(self.destimages + "/" + efconf["name"] + "/%s.png" % fname)
 			
 		# 保存配置

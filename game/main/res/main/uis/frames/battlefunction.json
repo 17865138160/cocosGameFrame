@@ -10,8 +10,8 @@
             "source":"wg_functions",
             "type":"table",
             "config":{
-                "itemsize":[32,16],
-				"itemspace":[16,0],
+                "itemsize":[96,48],
+				"itemspace":[48,0],
                 "selectable":true,
                 "itemrows":3,
                 "itemcolumns":2,
@@ -52,8 +52,8 @@
             "source":"wg_functions",
             "type":"table",
             "config":{
-                "itemsize":[32,16],
-				"itemspace":[16,0],
+                "itemsize":[96,48],
+				"itemspace":[48,0],
                 "selectable":true,
                 "itemrows":3,
                 "itemcolumns":2,

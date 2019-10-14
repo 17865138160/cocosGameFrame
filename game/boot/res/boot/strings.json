@@ -11,5 +11,7 @@
 	"PACK_LOAD_FAILURE":"游戏包[%s]加载失败",
 	"UPDATE_PACK":"更新游戏包[%s]...",
 	"PACK_UPDATE_FAILURE":"游戏包[%s]更新失败",
-	"COMPUTE_UPDATE_PACK":"计算需要更新的包..."
+	"COMPUTE_UPDATE_PACK":"计算需要更新的包...",
+	"UPDATE_APK_TITLE":"更新",
+	"UPDATE_APK_DESCRIBE":"更新游戏"
 }

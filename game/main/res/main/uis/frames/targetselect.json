@@ -10,7 +10,7 @@
             "source":"wg_rolelistext",
             "type":"table",
             "config":{
-                "itemsize":[64,16],
+                "itemsize":[192,48],
                 "selectable":true,
                 "itemrows":5,
                 "itemcolumns":1,

@@ -4,7 +4,7 @@
 			"name":"role_caocao",
 			"meta":"RoleModel",
 			"color":"green",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{
@@ -126,7 +126,7 @@
 			"name":"role_xuchu",
 			"meta":"RoleModel",
 			"color":"darkblue",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{
@@ -248,7 +248,7 @@
 			"name":"role_dianwei",
 			"meta":"RoleModel",
 			"color":"green",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{
@@ -370,7 +370,7 @@
 			"name":"role_zhangliao",
 			"meta":"RoleModel",
 			"color":"darkblue",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{
@@ -492,7 +492,7 @@
 			"name":"role_xunyu",
 			"meta":"RoleModel",
 			"color":"pink",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{
@@ -614,7 +614,7 @@
 			"name":"role_xiahouwei",
 			"meta":"RoleModel",
 			"color":"darkblue",
-			"modelsize":[16,16],
+			"modelsize":[48,48],
 			"anchor":[0.5,0],
 			"params":{
 				"actions":{

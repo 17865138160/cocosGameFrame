@@ -7,28 +7,28 @@
             <key>boot/images/spanel1</key>
             <dict>
                 <key>frame</key>
-                <string>{{1,1},{208,64}}</string>
+                <string>{{1,1},{624,192}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{208,64}}</string>
+                <string>{{0,0},{624,192}}</string>
                 <key>sourceSize</key>
-                <string>{208,64}</string>
+                <string>{624,192}</string>
             </dict>
             <key>boot/images/updateprog</key>
             <dict>
                 <key>frame</key>
-                <string>{{1,67},{199,6}}</string>
+                <string>{{1,195},{597,18}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
                 <false/>
                 <key>sourceColorRect</key>
-                <string>{{0,0},{199,6}}</string>
+                <string>{{0,0},{597,18}}</string>
                 <key>sourceSize</key>
-                <string>{199,6}</string>
+                <string>{597,18}</string>
             </dict>
         </dict>
         <key>metadata</key>
@@ -42,9 +42,9 @@
             <key>realTextureFileName</key>
             <string>images.png</string>
             <key>size</key>
-            <string>{210,74}</string>
+            <string>{626,214}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:51233b192f12caec90a4d8c335233f3c:d9128924ee766cc1168503bf48737a6f:e1a9b31caf258d7c92150a6ccbde6fbd$</string>
+            <string>$TexturePacker:SmartUpdate:6fb4a0841bcedae6f9201098098432ca:d8f03db9f65c7745d7396f5d4cd00295:e1a9b31caf258d7c92150a6ccbde6fbd$</string>
             <key>textureFileName</key>
             <string>images.png</string>
         </dict>

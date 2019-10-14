@@ -2,6 +2,6 @@
     "meta":"TextLabel",
     "name":"label",
 	"font":{
-		"name":"font_16"
+		"name":"normal"
 	}
 }
