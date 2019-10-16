@@ -266,7 +266,7 @@ function UpdateScene:beginUpdate()
 				-- 启动游戏
 				performWithDelay(self,function ()
 					dofile("main.lua") 
-				end,1)
+				end,0.3)
 			end
 
 			if gameConfig:isPackUpdatable() then
